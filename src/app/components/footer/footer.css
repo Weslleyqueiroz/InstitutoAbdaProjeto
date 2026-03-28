@@ -1,0 +1,329 @@
+/* ==========================================================================
+   CSS AJUSTADO PARA O COMPONENTE FOOTER - INSTITUTO ABDA (OSASCO)
+   ========================================================================== */
+
+:host {
+    /* DEFINIÇÃO DAS CORES DO INSTITUTO - Forçando caso não existam no global */
+    --abda-blue: #004080;
+    --abda-blue-dark: #002d5a;
+    --abda-red: #e30613;
+    --abda-gold: #ffcc00;
+    --text-muted: rgba(255, 255, 255, 0.7);
+    
+    display: block;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif; /* Fonte padrão vi no index.html */
+}
+
+/* CONTAINER PRINCIPAL DO FOOTER */
+.footer {
+    /* Fundo com degradê (Azul ABDA) */
+    background:
+        radial-gradient(ellipse at 10% 20%, rgba(0, 64, 128, 0.45) 0%, transparent 55%),
+        radial-gradient(ellipse at 90% 80%, rgba(227, 6, 19, 0.08) 0%, transparent 50%),
+        linear-gradient(160deg, var(--abda-blue) 0%, var(--abda-blue-dark) 100%);
+    color: white;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Padrão de linhas diagonais sutil no fundo (opcional) */
+.footer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+        -45deg,
+        rgba(255, 255, 255, 0.015) 0px,
+        rgba(255, 255, 255, 0.015) 1px,
+        transparent 1px,
+        transparent 12px
+    );
+    pointer-events: none;
+}
+
+/* ==========================================================================
+   1. SEÇÃO DE CHAMADA PARA AÇÃO (CTA) - Doe Agora
+   ========================================================================== */
+.footer-cta {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    padding: 36px 10%;
+}
+
+.footer-cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.footer-cta-label {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--abda-gold); /* Dourado vi no index.html */
+    margin-bottom: 4px;
+}
+
+.footer-cta-headline {
+    font-family: 'Playfair Display', serif; /* Fonte vi no index.html */
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* BOTÃO DOE AGORA (O QUE ESTÁ NO SEU HTML) */
+.btn-doe {
+    background: white;
+    color: var(--abda-red) !important;
+    border: 1px solid white;
+    padding: 14px 36px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none !important;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-doe:hover {
+    background: transparent;
+    color: white !important;
+    border-color: white;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.20);
+}
+
+.btn-doe i {
+    color: var(--abda-red);
+}
+
+.btn-doe:hover i {
+    color: white;
+}
+
+/* ==========================================================================
+   2. CORPO PRINCIPAL DO FOOTER (4 COLUNAS)
+   ========================================================================== */
+.footer-body {
+    /* Cria o layout de 4 colunas */
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+    gap: 50px;
+    padding: 56px 10% 48px;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================================================================
+   COLUNA 1: LOGO E DESCRIÇÃO
+   ========================================================================== */
+.footer-logo-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none !important;
+    margin-bottom: 18px;
+}
+
+/* Garante que a logo branca apareça, mesmo se o fundo for escuro */
+.footer-logo-link img {
+    filter: brightness(0) invert(1);
+    opacity: 0.92;
+}
+
+.footer-logo-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: white;
+    line-height: 1.2;
+}
+
+.footer-logo-name em {
+    font-style: normal;
+    color: var(--abda-gold);
+}
+
+.footer-desc {
+    font-size: 0.84rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 24px;
+    max-width: 280px;
+}
+
+/* ÍCONES SOCIAIS (vi que estão azuis na sua imagem, vamos ajustar) */
+.footer-social {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08); /* Fundo sutil */
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: white !important; /* Ícone branco */
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+}
+
+.footer-social-btn:hover {
+    background: var(--abda-red);
+    color: white !important;
+    transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   COLUNAS 2 E 3: TÍTULOS E LISTAS DE LINKS
+   ========================================================================== */
+.footer-heading {
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: white;
+    margin-bottom: 22px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Barrinha vermelha abaixo do título */
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 28px;
+    height: 2px;
+    background: var(--abda-red);
+}
+
+.footer-list {
+    list-style: none; /* Remove as bolinhas da lista vi na sua imagem */
+    padding: 0;
+    margin: 0;
+}
+
+.footer-list li a {
+    color: var(--text-muted);
+    text-decoration: none !important;
+    font-size: 0.86rem;
+    padding: 5px 0;
+    display: block;
+    transition: all 0.2s ease;
+}
+
+.footer-list li a:hover {
+    color: white;
+    padding-left: 5px;
+}
+
+/* Ajuste dos ícones dentro da lista vi na sua imagem */
+.footer-list li a i {
+    color: var(--abda-red);
+    margin-right: 8px;
+    font-size: 0.75rem;
+}
+
+/* ==========================================================================
+   COLUNA 4: INFORMAÇÕES DE CONTATO
+   ========================================================================= */
+.footer-contact-list {
+    list-style: none; /* Remove bolinhas vi na sua imagem */
+    padding: 0;
+    margin: 0;
+}
+
+.footer-contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.84rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+/* Ajuste dos ícones de contato vi na sua imagem */
+.footer-contact-list li i {
+    color: var(--abda-red);
+    margin-top: 4px;
+}
+
+/* ==========================================================================
+   3. BARRA INFERIOR (COPYRIGHT E CNPJ)
+   ========================================================================= */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+    padding: 20px 10%;
+}
+
+.footer-bottom-inner {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.76rem;
+    color: rgba(255, 255, 255, 0.4);
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE - AJUSTES PARA CELULAR E TABLET
+   ========================================================================= */
+@media (max-width: 1024px) {
+    .footer-body {
+        grid-template-columns: 1fr 1fr; /* 2 colunas */
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-body {
+        grid-template-columns: 1fr; /* 1 coluna */
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .footer-cta-inner {
+        justify-content: center;
+        text-align: center;
+    }
+    .footer-logo-link {
+        justify-content: center;
+    }
+    .footer-heading::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .footer-social {
+        justify-content: center;
+    }
+    .footer-contact-list li {
+        justify-content: center;
+    }
+    .footer-bottom-inner {
+        justify-content: center;
+        text-align: center;
+    }
+}
