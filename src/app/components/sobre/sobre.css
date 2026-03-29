@@ -42,10 +42,66 @@
 .menu ul li a:hover {
   color: #0056b3;
 }
+.belowheader{
+    text-align: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.instituto{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+.subtitle{
+    font-weight: 300;
+    font-family: "Inter", sans-serif;
+}
+.title{
+    padding: 60px;
+}
+.about{
+    font-size: 16px;
+    font-weight: 700;
+}
+.mission-body h2{
+    font-size: 16px;
+    font-weight: 700;
+}
+.vision-body h2{
+    font-size: 16px;
+    font-weight: 700;
+}
+.value-body h2, h3{
+    font-size: 16px;
+    font-weight: 700;
+}
 
-.carousel-placeholder {
 
-  min-height: 100px;
-  background-color: #f9f9f9;
-  
+
+.text-body, 
+.mission-body, 
+.vision-body {
+    font-family: "Inter", sans-serif;
+}
+.value-body ul li h2{
+    font-family: "Inter", sans-serif;
+}
+.value-body h2{
+    font-size: 16px;
+}
+.history-organization h2{
+      font-size: 16px;
+    font-weight: 700;
+}
+
+.donation-main{
+
+}
+
+.pagbank img{
+    width: 100px;
+    height: 100px;
+}
+.paypal{
+    width: 100px;
+    height: 100px;
 }
