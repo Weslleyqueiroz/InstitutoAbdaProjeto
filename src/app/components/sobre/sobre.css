@@ -93,15 +93,21 @@
     font-weight: 700;
 }
 
-.donation-main{
-
+.donation-main {
+    display: flex;      
+    gap: 80px;          
+    justify-content: flex-end;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
 }
 
-.pagbank img{
+
+.donation-main img {
     width: 100px;
     height: 100px;
-}
-.paypal{
-    width: 100px;
-    height: 100px;
+    object-fit: contain; 
+    border-radius: 8px; 
+     
 }
