@@ -1,16 +1,14 @@
 import { Routes } from '@angular/router';
 import { Home } from './components/home/home';
 import { Sobre } from './components/sobre/sobre';
+import { CoralComponent } from './components/coral/coral.component';
 
 export const routes: Routes = [
-    { 
-    path: 'home',
-    component: Home,
-    title: 'Instituto ABDA'
-},
-{
-    path: 'sobre',
-    component: Sobre,
-    title: 'Sobre nós'
-}
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+
+  { path: 'home', component: Home },
+  { path: 'sobre', component: Sobre },
+  { path: 'coral', component: CoralComponent },
+  { path: 'projetos', component: Home },
+  { path: 'contato', component: Home }
 ];
