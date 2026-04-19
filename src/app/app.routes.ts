@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { Home } from './components/home/home';
 import { Sobre } from './components/sobre/sobre';
 import { CoralComponent } from './components/coral/coral.component';
+import { Cadastrar } from './components/cadastrar/cadastrar';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -10,5 +11,6 @@ export const routes: Routes = [
   { path: 'sobre', component: Sobre },
   { path: 'coral', component: CoralComponent },
   { path: 'projetos', component: Home },
-  { path: 'contato', component: Home }
+  { path: 'contato', component: Home },
+  {path: 'cadastrar', component: Cadastrar}
 ];
