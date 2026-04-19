@@ -3,6 +3,7 @@ import { Home } from './components/home/home';
 import { Sobre } from './components/sobre/sobre';
 import { CoralComponent } from './components/coral/coral.component';
 import { Cadastrar } from './components/cadastrar/cadastrar';
+import { Eventos } from './components/eventos/eventos';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -12,5 +13,6 @@ export const routes: Routes = [
   { path: 'coral', component: CoralComponent },
   { path: 'projetos', component: Home },
   { path: 'contato', component: Home },
-  {path: 'cadastrar', component: Cadastrar}
+  {path: 'cadastrar', component: Cadastrar},
+  {path: 'eventos', component: Eventos}
 ];

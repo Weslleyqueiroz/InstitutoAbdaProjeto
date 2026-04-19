@@ -7,7 +7,7 @@ import { Carrossel } from "./components/carrossel/carrossel";
 import { Parceiros } from "./components/parceiros/parceiros";
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, Home, Footer, Carrossel, Parceiros],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
