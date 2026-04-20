@@ -75,8 +75,6 @@
     font-weight: 700;
 }
 
-
-
 .text-body, 
 .mission-body, 
 .vision-body {
@@ -88,26 +86,40 @@
 .value-body h2{
     font-size: 16px;
 }
+
+
 .history-organization h2{
       font-size: 16px;
     font-weight: 700;
+   
 }
 
-.donation-main {
-    display: flex;      
-    gap: 80px;          
-    justify-content: flex-end;
+.donation-main{
+    position: relative; 
+    display: block;
+    padding-right: 200px;
+}
+
+.paypal, .pagbank {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 100;
+    right: 20px; 
+    width: 150px;
+}
+
+.pagbank {
+    top: 200px; 
+}
+.paypal {
+    top: 50px; 
 }
 
 
-.donation-main img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain; 
-    border-radius: 8px; 
-     
+.donation-main img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+.donation-main img:hover {
+  transform: scale(1.1)
 }
