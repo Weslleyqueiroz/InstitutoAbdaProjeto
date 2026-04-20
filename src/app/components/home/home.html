@@ -1,0 +1,34 @@
+<header class="main-header">
+  <div class="nav-container">
+    <div class="logo">
+      <span class="logo-bold">INSTITUTO</span>
+    </div>
+
+    <nav class="menu">
+      <ul>
+        <li><a routerLink="/inicio">HOME</a></li>
+        <li><a routerLink="/sobre">SOBRE NÓS</a></li>
+        <li><a routerLink="/ajudar">COMO AJUDAR?</a></li>
+        <li><a routerLink="/cursos">CURSOS</a></li>
+        <li><a routerLink="/time">NOSSO TIME</a></li>
+        <li><a routerLink="/coral">CORAL E ORQUESTRA ABDA</a></li>
+        <li><a routerLink="/contato">CONTATO</a></li>
+        <li><a routerLink="/cadastrar">LOGIN</a> <img src="/public/login.png"></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div style="max-width: 850px;  margin: auto; padding: 24 20px;">
+<app-carrossel [imagens]="['/fotos_formatura-alunos-instituto-abda_6.jpg','/fotos_formatura-dezembro-2021_44']"></app-carrossel>
+</div>
+
+<div>
+  
+</div>
+
+<section class="carousel-placeholder">
+</section>
+<app-parceiros></app-parceiros>
+
+<app-footer></app-footer>
