@@ -45,10 +45,3 @@ __screenshots__/
 Thumbs.db
 
 #arquivos privaods
-/package-lock.json
-/package.json
-/tsconfig.json
-/tsconfig.app.json
-/tsconfig.spec.json
-/prettierrc
-/editorconfig
