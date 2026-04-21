@@ -45,7 +45,6 @@ __screenshots__/
 Thumbs.db
 
 #arquivos privaods
-/angular.json
 /package-lock.json
 /package.json
 /tsconfig.json
