@@ -56,3 +56,34 @@
   height: 25px;
   width: 25px;
 }
+
+
+.container-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    font-family: 'Montserrat', sans-serif; 
+}
+
+.container-main img{
+    margin-right: auto;
+    height: 200px;
+    
+   
+}
+.noticia-1{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.titulo{
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+.data{
+    display: flex;
+     margin-top: 20px;
+    margin-left: auto;
+}

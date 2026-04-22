@@ -51,16 +51,35 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  border-bottom: 1px solid #eee;
 }
 
 .imagem-evento{
   display: flex;
   align-items: center;
-  gap: 20px;
   
 }
+.eventos-img{
+  padding: 30px;
+  height: 300px;
+  width: 400px;
+}
+.button{
+  background-color: #ffffff;
+  color: black;
+  border-radius: 10px;
+  padding: 10px;
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+ 
+}
 
+.button:hover {
+ transition: all 0.3s ease;
+ background-color: #0056b3;
+}
 .eventos{
     display: flex;
     align-items: center;
@@ -86,5 +105,11 @@
 
 .subtitulo{
     font-size: 15px;
+}
+
+
+.icon{
+  height: 25px;
+  width: 25px;
 }
 

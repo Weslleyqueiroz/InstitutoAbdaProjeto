@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { Footer } from '../footer/footer';
 
 @Component({
-  selector: 'app-eventos',
+  selector: 'app-noticias',
   imports: [Footer],
-  templateUrl: './eventos.html',
-  styleUrl: './eventos.css',
+  templateUrl: './noticias.html',
+  styleUrl: './noticias.css',
 })
-export class Eventos {}
+export class Noticias {}
