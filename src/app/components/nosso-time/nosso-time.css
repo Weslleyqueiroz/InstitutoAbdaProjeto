@@ -1,0 +1,283 @@
+/* ============================================================
+   NOSSO TIME — Instituto ABDA
+   Estilo: Elegante e Sofisticado
+   Paleta: Azul profundo, dourado, branco marfim
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:host {
+  --azul:       #0c2340;
+  --azul-mid:   #163760;
+  --dourado:    #c9a84c;
+  --dourado-lt: #e8c97a;
+  --marfim:     #faf8f4;
+  --cinza:      #f0ede8;
+  --texto:      #2a2a2a;
+  --muted:      #7a7a7a;
+}
+
+/* ---------- Header (igual home) ---------- */
+.main-header {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  font-family: 'Montserrat', sans-serif;
+}
+.nav-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.logo-bold {
+  color: #003366;
+  font-weight: 900;
+  font-size: 26px;
+  letter-spacing: -1px;
+}
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+.menu ul li a {
+  text-decoration: none;
+  color: #003366;
+  font-weight: 700;
+  font-size: 13px;
+  transition: 0.3s;
+}
+.menu ul li a:hover { color: #0056b3; }
+.icon { height: 25px; width: 25px; }
+
+/* ---------- Hero Parallax ---------- */
+.hero-parallax {
+  background-image: url('https://institutoabda.com.br/assets/img/bg5-Parallax.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.hero-parallax::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+  
+  );
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+}
+.hero-content h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 62px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 6px;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+.hero-content h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: var(--dourado);
+  margin: 14px auto 0;
+}
+
+/* ---------- Breadcrumb ---------- */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  margin-top: 16px;
+}
+.breadcrumb a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.breadcrumb a:hover { color: var(--dourado-lt); }
+.breadcrumb span { color: rgba(255,255,255,0.4); }
+
+/* ---------- Seções ---------- */
+.time-section {
+  padding: 80px 40px;
+  background: var(--marfim);
+}
+.time-section.alt {
+  background: var(--cinza);
+}
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Título de seção com ornamento dourado */
+.time-section h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--azul);
+  margin-bottom: 48px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.time-section h2::before {
+  content: '';
+  display: inline-block;
+  width: 36px;
+  height: 2px;
+  background: var(--dourado);
+  flex-shrink: 0;
+}
+.time-section h2::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, rgba(201,168,76,0.3), transparent);
+}
+
+/* ---------- Grid ---------- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 28px;
+}
+
+/* ---------- Card ---------- */
+.team-card {
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(12,35,64,0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+.team-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(to right, var(--azul), var(--dourado));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(12,35,64,0.14);
+}
+.team-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Foto */
+.card-img-wrap {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+}
+.card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.5s ease;
+  filter: grayscale(8%);
+}
+.team-card:hover .card-img-wrap img {
+  transform: scale(1.06);
+  filter: grayscale(0%);
+}
+
+/* Corpo do card */
+.card-body {
+  padding: 22px 20px 26px;
+  border-top: 1px solid rgba(12,35,64,0.06);
+}
+.card-body h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--azul);
+  margin-bottom: 5px;
+  letter-spacing: 0.3px;
+}
+.card-body .cargo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--dourado);
+  margin-bottom: 18px;
+}
+
+/* Botão Ver Perfil */
+.btn-perfil {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--azul);
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 1px solid var(--dourado);
+  transition: color 0.2s, border-color 0.2s, gap 0.2s;
+}
+.btn-perfil::after {
+  content: '→';
+  transition: transform 0.2s;
+}
+.btn-perfil:hover {
+  color: var(--dourado);
+  gap: 12px;
+}
+.btn-perfil:hover::after {
+  transform: translateX(3px);
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 768px) {
+  .hero-content h1 { font-size: 38px; }
+  .hero-parallax { background-attachment: scroll; min-height: 260px; }
+  .time-section { padding: 50px 20px; }
+  .time-section h2 { font-size: 28px; }
+  .team-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; }
+  .card-img-wrap { height: 190px; }
+  .card-body { padding: 16px 14px 20px; }
+}
+@media (max-width: 480px) {
+  .team-grid { grid-template-columns: 1fr 1fr; }
+}

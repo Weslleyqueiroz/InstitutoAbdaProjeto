@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit, HostListener, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterLink, RouterModule } from '@angular/router';
 
 
 import { Footer } from '../footer/footer'; 
@@ -13,6 +13,7 @@ import { Parceiros } from '../parceiros/parceiros';
   imports: [
     CommonModule, 
     RouterModule, 
+    RouterLink, 
     Footer, 
     Parceiros
   ],

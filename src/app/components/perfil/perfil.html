@@ -1,0 +1,65 @@
+<!-- Header  -->
+<header class="main-header">
+  <div class="nav-container">
+    <div class="logo">
+      <span class="logo-bold">INSTITUTO</span>
+    </div>
+    <nav class="menu">
+      <ul>
+        <li><a routerLink="/home">HOME</a></li>
+        <li><a routerLink="/sobre">SOBRE NÓS</a></li>
+        <li><a routerLink="/ajudar">COMO AJUDAR?</a></li>
+        <li><a routerLink="/cursos">CURSOS</a></li>
+        <li><a routerLink="/nosso-time">NOSSO TIME</a></li>
+        <li><a routerLink="/coral">CORAL E ORQUESTRA ABDA</a></li>
+        <li><a routerLink="/contato">CONTATO</a></li>
+        <li><a routerLink="/cadastrar">LOGIN</a> <img class="icon" src="/public/login.png"></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- nome do membro -->
+<section class="hero-parallax">
+  <div class="hero-content">
+    <h1>{{ membro?.nome }}</h1>
+    <nav class="breadcrumb">
+      <a routerLink="/home">Home</a>
+      <span>/</span>
+      <a routerLink="/nosso-time">Nosso Time</a>
+    </nav>
+  </div>
+</section>
+
+<!-- Conteúdo do Perfil -->
+<section class="perfil-section" *ngIf="membro">
+  <div class="perfil-card">
+
+    <div class="perfil-foto-wrap">
+      <img [src]="membro.foto" [alt]="membro.nome" />
+    </div>
+
+    <h2><strong>{{ membro.nome }}</strong></h2>
+    <p class="cargo">{{ membro.cargo }}</p>
+
+    <div class="doacoes">
+      <a [href]="membro.paypal" target="_blank" class="btn-doacao" *ngIf="membro.paypal">
+        <img src="https://institutoabda.com.br/assets/img/image_paypal.png" alt="Doe via PayPal" />
+      </a>
+      <a [href]="membro.pagbank" target="_blank" class="btn-doacao" *ngIf="membro.pagbank">
+        <img src="https://institutoabda.com.br/assets/img/image_pagseguro.png" alt="Doe via PagBank" />
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Membro não encontrado -->
+<section class="perfil-section" *ngIf="!membro">
+  <div class="perfil-card">
+    <p class="nao-encontrado">Membro não encontrado.</p>
+    <a routerLink="/nosso-time" class="btn-voltar">← Voltar para Nosso Time</a>
+  </div>
+</section>
+
+<app-footer></app-footer>
