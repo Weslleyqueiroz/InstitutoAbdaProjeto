@@ -10,7 +10,8 @@ router.get('/', (req, res) => {
 });
 
 
-router.post('/cadastrar', (req, res) => {
+router.post('/cadastrar',
+  (req, res) => {
     console.log(req.body);
 
   return res.status(StatusCodes.CREATED).json(req.body);

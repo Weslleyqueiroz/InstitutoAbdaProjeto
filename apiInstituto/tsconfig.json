@@ -5,7 +5,11 @@
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+
+    /* Configurações de Build */
+    "outDir": "./build",    // Nome da pasta onde o código JS será criado
+    "rootDir": "./src"      // Onde está o seu código TypeScript original
   },
   "include": ["src/**/*"]
 }
