@@ -1,0 +1,15 @@
+<div class="admin-container">
+    <h1>Painel Administrativo</h1>
+    <p>Bem-vindo ao controle do Instituto ABDA.</p>
+
+    <div class="card-ferramentas">
+        <h3>Relatórios</h3>
+        <p>Clique no botão abaixo para baixar a lista completa de pessoas cadastradas.</p>
+
+        <button (click)="exportarParaCSV()" class="btn-download">
+            <i class="fa fa-download"></i> Baixar Lista de Usuários (.CSV)
+        </button>
+    </div>
+
+    <button [routerLink]="['/home']" class="btn-voltar">Voltar para o Site</button>
+</div>

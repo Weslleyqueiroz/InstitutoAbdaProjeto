@@ -1,18 +1,18 @@
 <div class="main-register">
-    <form action="http://localhost:3000" method="POST" class="formulario">
+    <form (ngSubmit)="cadastrar()" #usuarioForm="ngForm" class="formulario">
         <h2>Crie a sua conta</h2>
 
         <label for="name">Nome</label>
-        <input type="text" id="name" placeholder="Ex: Weslley">
+        <input type="text" name="nome" [(ngModel)]="usuario.nome" placeholder="Ex: Weslley">
 
         <label for="sobrenome">Sobrenome</label>
-        <input type="text" id="sobrenome" placeholder="Seu sobrenome">
+        <input type="text" name="sobrenome" [(ngModel)]="usuario.sobrenome" placeholder="Seu sobrenome">
 
         <label for="email">E-mail</label>
-        <input type="email" id="email" placeholder="email@exemplo.com">
+        <input type="email" name="email" [(ngModel)]="usuario.email" placeholder="email@exemplo.com">
 
         <label for="senha">Senha</label>
-        <input type="password" id="senha" placeholder="Crie uma senha forte">
+        <input type="password" name="senha" [(ngModel)]="usuario.senha" placeholder="Crie uma senha forte">
 
         <button type="submit">Cadastrar Agora</button>
     </form>

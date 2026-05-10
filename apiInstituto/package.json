@@ -1,12 +1,15 @@
 {
   "name": "apiInstituto",
   "packageManager": "yarn@4.12.0",
- "scripts": {
-  "start": "ts-node-dev ./src/index.ts"
-},
+  "scripts": {
+    "start": "ts-node-dev ./src/index.ts"
+  },
   "dependencies": {
+    "@angular/fire": "^20.0.1",
+    "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
+    "firebase": "^11.10.0",
     "http-status-codes": "^2.3.0"
   },
   "devDependencies": {
@@ -14,6 +17,7 @@
     "@eslint/js": "^10.0.1",
     "@eslint/json": "^1.2.0",
     "@eslint/markdown": "^8.0.1",
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "@types/node": "^25.6.0",
     "eslint": "^10.3.0",

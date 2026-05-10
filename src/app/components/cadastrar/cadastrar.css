@@ -3,17 +3,17 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #f8f9fa; 
+    background: #f8f9fa;
     padding: 20px;
 }
 
 .formulario {
     background: #ffffff;
     width: 100%;
-    max-width: 500px; 
-    padding: 40px;    
+    max-width: 500px;
+    padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
 
@@ -36,11 +36,11 @@ label {
 input {
     width: 100%;
     padding: 12px 15px;
-    margin-bottom: 25px; 
+    margin-bottom: 25px;
     border: 1.5px solid #e1e1e1;
     border-radius: 8px;
     font-size: 1rem;
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease;
     box-sizing: border-box;
 }
 
@@ -66,4 +66,19 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+.btn-exportar {
+    background-color: #28a745; /* Verde */
+    color: white;
+    margin-top: 10px;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-exportar:hover {
+    background-color: #218838;
 }

@@ -1,6 +1,10 @@
 import { Router } from 'express';
 import { StatusCodes } from 'http-status-codes';
 
+import {pessoasController} from './../controllers'
+
+
+
 const router = Router();
 
 
@@ -10,12 +14,9 @@ router.get('/', (req, res) => {
 });
 
 
-router.post('/cadastrar',
-  (req, res) => {
-    console.log(req.body);
-
-  return res.status(StatusCodes.CREATED).json(req.body);
-});
+router.post('/cadastrar' , (req,res) =>{
+  return res.status(200).json({mensagem: "Cadastro realizado!"})
+} )
 
 
 

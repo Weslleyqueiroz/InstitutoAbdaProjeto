@@ -7,6 +7,7 @@ import { Eventos } from './components/eventos/eventos';
 import { Noticias } from './components/noticias/noticias';
 import { NossoTime } from './components/nosso-time/nosso-time';
 import { Perfil } from './components/perfil/perfil';
+import { AdminComponent } from './admin/admin';
 
 
 export const routes: Routes = [
@@ -22,4 +23,5 @@ export const routes: Routes = [
   {path: 'noticias' , component: Noticias},
   {path: 'nosso-time', component: NossoTime},
   { path: 'nosso-time/perfil/:slug', component: Perfil },
+  { path: 'admin-dashboard-secret', component: AdminComponent },
 ];
