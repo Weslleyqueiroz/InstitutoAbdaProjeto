@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:host {
+  --azul:       #0c2340;
+  --azul-mid:   #163760;
+  --dourado:    #c9a84c;
+  --dourado-lt: #e8c97a;
+  --marfim:     #faf8f4;
+  --cinza:      #f0ede8;
+  --texto:      #2a2a2a;
+  --muted:      #7a7a7a;
+}
+
+/* ---------- Hero ---------- */
+.hero-parallax {
+  background-image: url('https://institutoabda.com.br/assets/img/bg1-Parallax.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-parallax::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(12, 35, 64, 0.15);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 62px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+.hero-content h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: var(--dourado);
+  margin: 14px auto 0;
+}
+
+.hero-content p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  opacity: 0.8;
+  margin-top: 16px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  margin-top: 16px;
+}
+
+.breadcrumb a { color: rgba(255,255,255,0.7); text-decoration: none; }
+.breadcrumb a:hover { color: var(--dourado-lt); }
+.breadcrumb span { color: rgba(255,255,255,0.4); }
+
+/* ---------- Intro ---------- */
+.depoimentos-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 60px auto 20px;
+  padding: 0 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+/* ---------- Seção ---------- */
+.depoimentos-section {
+  padding: 60px 40px 80px;
+  background: var(--marfim);
+}
+
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-titulo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--azul);
+  margin-bottom: 48px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.section-titulo::before {
+  content: '';
+  display: inline-block;
+  width: 36px;
+  height: 2px;
+  background: var(--dourado);
+  flex-shrink: 0;
+}
+
+.section-titulo::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, rgba(201,168,76,0.3), transparent);
+}
+
+/* ---------- Grid ---------- */
+.depoimentos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 24px;
+}
+
+/* Card grande (primeiro e último) */
+.dep-card:nth-child(1),
+.dep-card:nth-child(6) {
+  grid-column: span 2;
+}
+
+/* ---------- Card com foto de fundo ---------- */
+.dep-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 460px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: default;
+  box-shadow: 0 8px 32px rgba(12,35,64,0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dep-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(12,35,64,0.25);
+}
+
+.dep-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: top center;
+  transition: transform 0.5s ease;
+  filter: grayscale(15%);
+}
+
+.dep-card:hover .dep-bg {
+  transform: scale(1.05);
+  filter: grayscale(0%);
+}
+
+.dep-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(12, 35, 64, 0.97) 0%,
+    rgba(12, 35, 64, 0.7) 40%,
+    rgba(12, 35, 64, 0.15) 100%
+  );
+}
+
+/* ---------- Conteúdo do card ---------- */
+.dep-conteudo {
+  position: relative;
+  z-index: 2;
+  padding: 28px;
+  color: white;
+}
+
+.dep-aspas {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 80px;
+  color: var(--dourado);
+  line-height: 0.6;
+  margin-bottom: 12px;
+  display: block;
+  opacity: 0.8;
+}
+
+.dep-texto {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.dep-autor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid rgba(201,168,76,0.3);
+  padding-top: 16px;
+}
+
+.dep-autor-foto {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  border: 2px solid var(--dourado);
+  flex-shrink: 0;
+}
+
+.dep-autor-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.dep-nome {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+}
+
+.dep-cargo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--dourado);
+}
+
+/* ---------- CTA Doação ---------- */
+.cta-doe {
+  background: linear-gradient(135deg, var(--azul), var(--azul-mid));
+  padding: 70px 20px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.cta-inner h2 {
+  font-family: 'Cormorant Garamond', serif;
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.cta-inner p {
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+  margin-bottom: 36px;
+}
+
+.cta-botoes {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-doe {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 32px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.btn-doe:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+
+.btn-icon { font-size: 22px; }
+
+.btn-texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+}
+
+.btn-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.btn-marca {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.paypal { background: #003087; color: white; }
+.pagseguro { background: var(--dourado); color: var(--azul); }
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 900px) {
+  .depoimentos-grid { grid-template-columns: 1fr 1fr; }
+  .dep-card:nth-child(1),
+  .dep-card:nth-child(6) { grid-column: span 2; }
+}
+
+@media (max-width: 600px) {
+  .depoimentos-grid { grid-template-columns: 1fr; }
+  .dep-card:nth-child(1),
+  .dep-card:nth-child(6) { grid-column: span 1; }
+  .hero-content h1 { font-size: 38px; }
+  .hero-parallax { background-attachment: scroll; }
+  .depoimentos-section { padding: 40px 16px; }
+}

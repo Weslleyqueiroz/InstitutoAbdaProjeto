@@ -1,0 +1,102 @@
+.page-banner {
+  background: linear-gradient(135deg, #003366, #0056b3);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.page-banner h1 {
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.page-banner p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.fotos-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.albuns-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+.album-card {
+  text-decoration: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  transition: transform 0.2s, box-shadow 0.2s;
+  background: #fff;
+}
+
+.album-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.16);
+}
+
+.album-img-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+.album-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.album-card:hover .album-img-wrap img {
+  transform: scale(1.06);
+}
+
+.album-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 51, 102, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.album-card:hover .album-overlay {
+  opacity: 1;
+}
+
+.album-overlay span {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.album-info {
+  padding: 14px 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.album-info h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 4px;
+}
+
+.album-qtd {
+  font-size: 12px;
+  color: #999;
+  font-weight: 600;
+}

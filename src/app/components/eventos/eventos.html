@@ -1,53 +1,60 @@
-  <header class="main-header">
-    <div class="nav-container">
-      <div class="logo">
-        <span class="logo-bold">INSTITUTO</span>
-      </div>
+<app-navbar></app-navbar>
 
-      <nav class="menu">
-        <ul>
-          <li><a routerLink="/inicio">HOME</a></li>
-          <li><a routerLink="/sobre">SOBRE NÓS</a></li>
-          <li><a routerLink="/ajudar">COMO AJUDAR?</a></li>
-          <li><a routerLink="/cursos">CURSOS</a></li>
-          <li><a routerLink="/time">NOSSO TIME</a></li>
-          <li><a routerLink="/coral">CORAL E ORQUESTRA ABDA</a></li>
-          <li><a routerLink="/contato">CONTATO</a></li>
-          <li><a routerLink="/cadastrar">LOGIN</a> <img  class="icon"  src="/public/login.png"></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<section class="page-banner">
+  <h1>Eventos</h1>
+  <p>Home / Eventos</p>
+</section>
 
-<section class="principal">
-  <div class="container-eventos">
-  <div class="imagem-evento">
-    <img src="/public/eventos_formatura-da-turma-de-canto-2019-06-21_1.jpg" class="eventos-img">
-  </div>
-  <div class="eventos">
-    <div class="item-1">
-          <h1>Formatura da turma de canto</h1>
-          <p>Rua Alice Manholer Piteri, 307 - Sala 10, Centro Osasco/SP 06.018-160</p>
-          <p>2019-06-21</p>
-          <p>18:00</p>
-          <h2 class="subtitulo">Formatura da Turma de Canto</h2>
-          <button class="button"> Ver detalhes</button>
+<section class="container-main">
+
+  <div class="evento-card">
+    <div class="evento-data-box">
+      <span class="dia">21</span>
+      <span class="mes">JUN</span>
+    </div>
+    <img src="/eventos_formatura-da-turma-de-canto-2019-06-21_1.jpg" alt="Formatura da Turma de Canto">
+    <div class="evento-info">
+      <h2>Formatura da Turma de Canto</h2>
+      <p class="local">📍 Rua Alice Manholer Piteri, 307 - Sala 10, Centro — Osasco/SP</p>
+      <p class="horario">🕕 21/06/2019 às 18:00</p>
+      <p class="descricao">Formatura da Turma de Canto do Instituto ABDA.</p>
+      <button class="btn-detalhes">Ver detalhes</button>
     </div>
   </div>
-  <div class="imagem-evento">
-    <img src="/public/eventos_formatura-da-turma-de-canto-2019-06-21_1.jpg" class="eventos-img">
-  </div>
-  <div class="eventos">
-    <div class="item-2">
-          <h1>Formatura da turma de canto</h1>
-          <p>Rua Alice Manholer Piteri, 307 - Sala 10, Centro Osasco/SP 06.018-160</p>
-          <p>2019-11-21</p>
-          <p>19:00</p>
-          <h2 class="subtitulo">Formatura da Turma de Canto</h2>
-          <button class="button"> Ver detalhes</button>
+
+  <div class="evento-card">
+    <div class="evento-data-box">
+      <span class="dia">21</span>
+      <span class="mes">NOV</span>
+    </div>
+    <img src="/eventos_formatura-da-turma-de-canto-2019-06-21_1.jpg" alt="Formatura da Turma de Canto">
+    <div class="evento-info">
+      <h2>Formatura da Turma de Canto</h2>
+      <p class="local">📍 Rua Alice Manholer Piteri, 307 - Sala 10, Centro — Osasco/SP</p>
+      <p class="horario">🕕 21/11/2019 às 19:00</p>
+      <p class="descricao">Formatura da Turma de Canto do Instituto ABDA.</p>
+    
+      <a routerLink="/eventos/formatura-turma-canto-junho-2019" class="btn-detalhes">Ver detalhes</a>
+      <a routerLink="/eventos/formatura-turma-canto-novembro-2019" class="btn-detalhes">Ver detalhes</a>
+      <a routerLink="/eventos/terceiro-evento" class="btn-detalhes">Ver detalhes</a>>
     </div>
   </div>
+
+  <div class="evento-card">
+    <div class="evento-data-box">
+      <span class="dia">07</span>
+      <span class="mes">MAR</span>
+    </div>
+    <img src="/eventos_formatura-da-turma-de-canto-2019-06-21_1.jpg" alt="Terceiro Evento">
+    <div class="evento-info">
+      <h2>Este é meu terceiro evento</h2>
+      <p class="local">📍 Rua Duzentos e Dezenove, 278 — São Paulo/SP</p>
+      <p class="horario">🕕 07/03/2020 às 06:00</p>
+      <p class="descricao">Aqui vai os detalhes do evento tais como os nomes dos participantes.</p>
+      <button class="btn-detalhes">Ver detalhes</button>
+    </div>
   </div>
+
 </section>
 
 <app-footer></app-footer>

@@ -1,115 +1,138 @@
-/* Configuração do Header */
-.main-header {
-  background-color: #ffffff;
-  width: 100%;
-  padding: 20px 0;
-  border-bottom: 1px solid #eee;
-  font-family: 'Montserrat', sans-serif; /* Importante para o estilo da imagem */
+.page-banner {
+  background: linear-gradient(135deg, #003366, #0056b3);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.nav-container {
-  max-width: 1300px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-}
-
-/* Estilo do Texto "INSTITUTO" */
-.logo-bold {
-  color: #003366;
+.page-banner h1 {
+  font-size: 36px;
   font-weight: 900;
-  font-size: 26px;
-  letter-spacing: -1px;
+  margin-bottom: 8px;
 }
 
-/* Estilo do Menu */
-.menu ul {
-  list-style: none;
+.page-banner p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.container-main {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px;
   display: flex;
-  gap: 25px;
-  margin: 0;
-  padding: 0;
+  flex-direction: column;
+  gap: 30px;
 }
 
-.menu ul li a {
-  text-decoration: none;
-  color: #003366;
-  font-weight: 700;
-  font-size: 13px;
-  transition: 0.3s;
-}
-
-.menu ul li a:hover {
-  color: #0056b3;
-}
-
-/*item1 */
-
-.container-eventos{
+.evento-card {
   display: flex;
+  align-items: stretch;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.evento-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+}
+
+.evento-data-box {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid #eee;
-}
-
-.imagem-evento{
-  display: flex;
-  align-items: center;
-  
-}
-.eventos-img{
-  padding: 30px;
-  height: 300px;
-  width: 400px;
-}
-.button{
-  background-color: #ffffff;
-  color: black;
-  border-radius: 10px;
+  background: #003366;
+  color: white;
+  min-width: 70px;
   padding: 10px;
-  display: block;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: auto;
- 
-}
-
-.button:hover {
- transition: all 0.3s ease;
- background-color: #0056b3;
-}
-.eventos{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    padding: 20px;
-    margin-top: 20px;
-    font-family: 'Montserrat', sans-serif;
- 
-}
-
-.eventos h1{
-  font-size: 24px;
-  font-weight: 700;
-
-}
-
-.eventos p{
-  font-size: 14px;
   font-family: 'Montserrat', sans-serif;
-  
 }
 
-.subtitulo{
-    font-size: 15px;
+.evento-data-box .dia {
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1;
 }
 
-
-.icon{
-  height: 25px;
-  width: 25px;
+.evento-data-box .mes {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ffcc00;
 }
 
+.evento-card img {
+  width: 220px;
+  min-width: 220px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.evento-info {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.evento-info h2 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.local, .horario {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.descricao {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.btn-detalhes {
+  align-self: flex-start;
+  background: #003366;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 9px 20px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btn-detalhes:hover {
+  background: #e30613;
+}
+
+@media (max-width: 700px) {
+  .evento-card {
+    flex-direction: column;
+  }
+
+  .evento-card img {
+    width: 100%;
+    height: 200px;
+  }
+
+  .evento-data-box {
+    flex-direction: row;
+    gap: 6px;
+    padding: 12px 20px;
+  }
+}

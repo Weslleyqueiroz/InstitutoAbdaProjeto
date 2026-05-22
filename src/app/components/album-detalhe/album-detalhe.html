@@ -1,0 +1,30 @@
+<app-navbar></app-navbar>
+
+<section class="page-banner">
+  <h1>{{ album?.titulo }}</h1>
+  <p><a routerLink="/home">Home</a> / <a routerLink="/fotos">Fotos</a> / {{ album?.titulo }}</p>
+</section>
+
+<section class="album-container" *ngIf="album">
+  <div class="fotos-grid">
+    <div class="foto-item" *ngFor="let foto of album.fotos" (click)="abrirFoto(foto)">
+      <img [src]="foto" [alt]="album.titulo" loading="lazy">
+      <div class="foto-overlay">🔍</div>
+    </div>
+  </div>
+</section>
+
+<section *ngIf="!album" class="nao-encontrado">
+  <h2>Álbum não encontrado.</h2>
+  <a routerLink="/fotos">Voltar para Fotos</a>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" *ngIf="fotoAtiva" (click)="fecharFoto()">
+  <div class="lightbox-inner" (click)="$event.stopPropagation()">
+    <button class="lightbox-fechar" (click)="fecharFoto()">✕</button>
+    <img [src]="fotoAtiva" alt="Foto ampliada">
+  </div>
+</div>
+
+<app-footer></app-footer>

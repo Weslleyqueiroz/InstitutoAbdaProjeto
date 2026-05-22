@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:host {
+  --azul:       #0c2340;
+  --azul-mid:   #163760;
+  --dourado:    #c9a84c;
+  --dourado-lt: #e8c97a;
+  --marfim:     #faf8f4;
+  --cinza:      #f0ede8;
+  --muted:      #7a7a7a;
+}
+
+.hero-parallax {
+  background-image: url('https://institutoabda.com.br/assets/img/bg2-Parallax.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-parallax::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(12, 35, 64, 0.25);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 62px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+.hero-content h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: var(--dourado);
+  margin: 14px auto 0;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  margin-top: 16px;
+}
+
+.breadcrumb a { color: rgba(255,255,255,0.7); text-decoration: none; }
+.breadcrumb a:hover { color: var(--dourado-lt); }
+.breadcrumb span { color: rgba(255,255,255,0.4); }
+
+/* ---------- Intro ---------- */
+.intro-section {
+  background: #fff;
+  padding: 70px 40px;
+  border-bottom: 1px solid #e8e4dc;
+}
+
+.intro-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.intro-linha {
+  width: 3px;
+  min-height: 100px;
+  background: var(--dourado);
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+.intro-texto h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--azul);
+  margin-bottom: 16px;
+  letter-spacing: 0.3px;
+}
+
+.intro-texto p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.9;
+}
+
+/* ---------- Relatórios ---------- */
+.relatorios-section {
+  padding: 70px 40px;
+  background: var(--marfim);
+}
+
+.section-inner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.section-titulo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--azul);
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.section-titulo::before {
+  content: '';
+  display: inline-block;
+  width: 36px;
+  height: 2px;
+  background: var(--dourado);
+  flex-shrink: 0;
+}
+
+.section-titulo::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, rgba(201,168,76,0.3), transparent);
+}
+
+.relatorios-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.relatorio-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 18px 24px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(12,35,64,0.07);
+  transition: transform 0.2s, box-shadow 0.2s, border-left 0.2s;
+  border-left: 3px solid transparent;
+}
+
+.relatorio-card:hover {
+  transform: translateX(6px);
+  box-shadow: 0 6px 20px rgba(12,35,64,0.13);
+  border-left-color: var(--dourado);
+}
+
+.rel-icone {
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.rel-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.rel-tag {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 20px;
+  width: fit-content;
+}
+
+.tag-dre { background: #e8f0fe; color: #1a56db; }
+.tag-balanco { background: #e8f5e9; color: #2e7d32; }
+.tag-balancete { background: #fff8e1; color: #f57f17; }
+.tag-prestacao { background: #fce4ec; color: #c62828; }
+
+.rel-info h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--azul);
+}
+
+.rel-download {
+  font-size: 20px;
+  color: var(--dourado);
+  font-weight: 700;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(201,168,76,0.1);
+  transition: background 0.2s;
+}
+
+.relatorio-card:hover .rel-download {
+  background: var(--dourado);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 { font-size: 38px; }
+  .hero-parallax { background-attachment: scroll; }
+  .relatorios-section, .intro-section { padding: 40px 20px; }
+  .intro-inner { flex-direction: column; gap: 20px; }
+  .intro-linha { width: 40px; height: 3px; min-height: unset; margin-top: 0; }
+}

@@ -1,30 +1,140 @@
-<header class="main-header">
-  <div class="nav-container">
-    <div class="logo">
-      <a routerLink="/home"><span class="logo-bold">INSTITUTO</span></a>
-    </div>
-    <nav class="menu">
-      <ul>
-        <li><a routerLink="/home"       routerLinkActive="active">HOME</a></li>
-        <li><a routerLink="/sobre"      routerLinkActive="active">SOBRE NÓS</a></li>
-        <li><a routerLink="/eventos"    routerLinkActive="active">EVENTOS</a></li>
-        <li><a routerLink="/noticias"   routerLinkActive="active">NOTÍCIAS</a></li>
-        <li><a routerLink="/nosso-time" routerLinkActive="active">NOSSO TIME</a></li>
-        <li><a routerLink="/coral"      routerLinkActive="active">CORAL E ORQUESTRA ABDA</a></li>
-        <li><a routerLink="/contato"    routerLinkActive="active">CONTATO</a></li>
-        <li><a routerLink="/cadastrar"  routerLinkActive="active">LOGIN <img class="icon" src="/public/login.png"></a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+<app-navbar></app-navbar>
+
+<section class="page-banner">
+  <h1>Notícias</h1>
+  <p>Home / Notícias</p>
+</section>
 
 <section class="container-main">
-    <div class="noticia-1">
-        <img src="/public/fotos_instituto-abda-recebe-titulo-de-utilidade-publica-na-camara_32.jpg">
-        <a class="titulo" href="https://www.facebook.com/tvcamaraosascosp/videos/338014431127996/">Instituto ABDA recebe título de utilidade pública na câmara.</a>
-        <p class="data">19 Fevereiro 2022 18:56:00</p>
-    </div>
 
+  <div class="noticia-card">
+    <img src="/fotos_instituto-abda-recebe-titulo-de-utilidade-publica-na-camara_32.jpg" alt="Instituto ABDA recebe título de utilidade pública">
+    <div class="noticia-info">
+      <a class="titulo" href="https://www.facebook.com/tvcamaraosascosp/videos/338014431127996/" target="_blank">
+        Instituto ABDA recebe título de utilidade pública na câmara.
+      </a>
+      <p class="data">19 Fevereiro 2022</p>
+    </div>
+  </div>
+
+  <div class="noticia-card">
+    <img src="/fotos_nossas-aulas-comecaram_28.jpg" alt="Nossas aulas começaram">
+    <div class="noticia-info">
+      <a class="titulo" href="https://www.visaooeste.com.br/projeto-de-lei-de-ribamar-concede-titulo-de-utilidade-publica-ao-instituto-abda-em-osasco/" target="_blank">
+        Jornal Visão Oeste — Projeto de lei concede título de utilidade pública ao Instituto ABDA
+      </a>
+      <p class="data">17 Dezembro 2021</p>
+    </div>
+  </div>
+
+  <div class="noticia-card">
+    <img src="/fotos_nossas-aulas-comecaram_28.jpg" alt="Nossas aulas começaram">
+    <div class="noticia-info">
+      <a class="titulo" href="https://www.osasco.sp.leg.br/institucional/noticias/camara-aprova-projeto-de-lei-que-concede-titulo-de-utilidade-publica-para-instituto-abda" target="_blank">
+        Câmara aprova projeto de lei que concede título de utilidade pública para Instituto ABDA
+      </a>
+      <p class="data">17 Dezembro 2021</p>
+    </div>
+  </div>
+
+  <div class="noticia-card">
+    <img src="/fotos_nossas-aulas-comecaram_28.jpg" alt="Nossas aulas começaram">
+    <div class="noticia-info">
+      <span class="titulo">Nossas aulas começaram!!!</span>
+      <p class="descricao">Começamos com nossa nova turma de Violinos!!! Venha fazer parte!</p>
+      <p class="data">09 Agosto 2021</p>
+    </div>
+  </div>
+
+  <div class="noticia-card">
+    <img src="/fotos_quarentena-sem-fome_27.jpg" alt="Cesta do Bem">
+    <div class="noticia-info">
+      <span class="titulo">Cesta do Bem — 15 de Julho de 2021</span>
+      <p class="descricao">No dia 15/07, mais um dia de vitória na luta contra a fome! Instituto Abda atendeu cerca de 130 famílias.</p>
+      <p class="data">16 Julho 2021</p>
+    </div>
+  </div>
+
+  <div class="noticia-card">
+    <img src="/fotos_visita-a-casa-de-recuperacao-humanita_25.jpg" alt="Visita à Casa de recuperação Humanitá">
+    <div class="noticia-info">
+      <span class="titulo">Visita à Casa de recuperação Humanitá</span>
+      <p class="descricao">Dia 08 de Julho tivemos o prazer de visitar a casa de recuperação Humanitá, onde levamos doações.</p>
+      <p class="data">15 Julho 2021</p>
+    </div>
+  </div>
+
+  <div class="noticia-card">
+    <img src="/fotos_parceiros-staccato-instrumentos-musicais_21.jpg" alt="Parceiros Staccato">
+    <div class="noticia-info">
+      <span class="titulo">Parceiros — STACCATO INSTRUMENTOS MUSICAIS</span>
+      <p class="descricao">Gostaríamos de externar nossa imensa gratidão à STACCATO INSTRUMENTOS MUSICAIS por todas as doações.</p>
+      <p class="data">11 Fevereiro 2021</p>
+    </div>
+  </div>
+
+  <div class="noticia-card">
+    <img src="/fotos_feliz-dia-dos-professores_18.jpg" alt="Feliz dia do Professor">
+    <div class="noticia-info">
+      <span class="titulo">Feliz dia do Professor!</span>
+      <p class="descricao">Aos professores que com empenho se dedicam à arte de ensinar, um agradecimento cheio de carinho!</p>
+      <p class="data">15 Outubro 2020</p>
+    </div>
+  </div>
+
+  <div class="noticia-card">
+    <img src="/fotos_reformas-no-instituto-abda_25.jpg" alt="Reformas no Instituto">
+    <div class="noticia-info">
+      <span class="titulo">Reformas no Instituto Abda</span>
+      <p class="descricao">As reformas no Instituto Abda estão a todo vapor!</p>
+      <p class="data">13 Outubro 2020</p>
+    </div>
+  </div>
+
+  <div class="noticia-card">
+    <img src="/fotos_nova-sede-do-instituto-abda_13.jpg" alt="Nova sede">
+    <div class="noticia-info">
+      <span class="titulo">Nova sede do Instituto Abda</span>
+      <p class="descricao">É com grande alegria que anunciamos que o Instituto Abda estará de mudança para uma nova sede.</p>
+      <p class="data">30 Julho 2020</p>
+    </div>
+  </div>
+
+  <div class="noticia-card">
+    <img src="/fotos_inverno-solidario-abda-2_10.jpg" alt="Inverno Solidário">
+    <div class="noticia-info">
+      <span class="titulo">Inverno Solidário Abda – 2</span>
+      <p class="descricao">Doações de cestas básicas e salgadinhos para crianças.</p>
+      <p class="data">14 Julho 2020</p>
+    </div>
+  </div>
+
+  <div class="noticia-card">
+    <img src="/fotos_inverno-solidario-abda_9.jpg" alt="Inverno Solidário">
+    <div class="noticia-info">
+      <span class="titulo">Inverno Solidário Abda</span>
+      <p class="descricao">Doações de cobertores a moradores de rua.</p>
+      <p class="data">07 Julho 2020</p>
+    </div>
+  </div>
+
+  <div class="noticia-card">
+    <img src="/fotos_assembleia-geral-extraordinaria_8.jpg" alt="Assembleia Geral">
+    <div class="noticia-info">
+      <span class="titulo">Assembleia Geral Extraordinária</span>
+      <p class="data">30 Junho 2020</p>
+    </div>
+  </div>
+
+  <div class="noticia-card">
+    <img src="/fotos_noticia-sobre-a-formatura-do-curso-de-2009_6.jpg" alt="Primeira aula de violino">
+    <div class="noticia-info">
+      <span class="titulo">Nossos alunos na primeira aula de violino de 2020</span>
+      <p class="descricao">Nossos alunos na primeira aula de violino de 2020. Venha fazer parte desta turma!</p>
+      <p class="data">27 Abril 2020</p>
+    </div>
+  </div>
 
 </section>
+
 <app-footer></app-footer>

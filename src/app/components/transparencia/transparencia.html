@@ -1,0 +1,62 @@
+<app-navbar></app-navbar>
+
+<section class="hero-parallax">
+  <div class="hero-content">
+    <h1>Transparência</h1>
+    <nav class="breadcrumb">
+      <a routerLink="/home">Home</a>
+      <span>/</span>
+      <span>Transparência</span>
+    </nav>
+  </div>
+</section>
+
+<section class="intro-section">
+  <div class="intro-inner">
+    <div class="intro-texto">
+      <h2>Gestão <span>honesta</span> e transparente</h2>
+      <p>O Instituto ABDA valoriza a transparência e sabe o quanto é importante que o trabalho desenvolvido seja feito de forma honesta, compartilhando resultados com aqueles que estão engajados em nossos projetos, com as instituições parceiras que somam conosco para fazer a diferença, e com aqueles que torcem pelo sucesso dos nossos programas.</p>
+    </div>
+    <div class="intro-destaques">
+      <div class="destaque-item">
+        <div class="destaque-icone">📊</div>
+        <div>
+          <h3>Cenário Financeiro</h3>
+          <p>Acompanhe os balanços e DREs anuais do Instituto.</p>
+        </div>
+      </div>
+      <div class="destaque-item">
+        <div class="destaque-icone">📋</div>
+        <div>
+          <h3>Composição Estatutária</h3>
+          <p>Acesso à estrutura organizacional e documentos oficiais.</p>
+        </div>
+      </div>
+      <div class="destaque-item">
+        <div class="destaque-icone">✅</div>
+        <div>
+          <h3>Resultados</h3>
+          <p>Relatórios digitais de programas e projetos realizados.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="relatorios-section">
+  <div class="section-inner">
+    <h2 class="section-titulo">Relatórios</h2>
+    <div class="relatorios-grid">
+      <a *ngFor="let rel of relatorios" [href]="rel.url" target="_blank" class="relatorio-card">
+        <div class="rel-icone">📄</div>
+        <div class="rel-info">
+          <span [class]="'rel-tag ' + getCor(rel.tipo)">{{ rel.tipo }}</span>
+          <h3>{{ rel.titulo }}</h3>
+        </div>
+        <div class="rel-download">↓</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

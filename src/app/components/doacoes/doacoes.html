@@ -1,0 +1,94 @@
+<app-navbar></app-navbar>
+
+<section class="hero-parallax">
+  <div class="hero-content">
+    <h1>Doe Aqui</h1>
+    <nav class="breadcrumb">
+      <a routerLink="/home">Home</a>
+      <span>/</span>
+      <span>Doações</span>
+    </nav>
+  </div>
+</section>
+
+<section class="intro-section">
+  <div class="intro-inner">
+    <div class="intro-linha"></div>
+    <div class="intro-texto">
+      <h2>Por que contribuir com o Instituto ABDA?</h2>
+      <p>Para dar continuidade à transformação social através da educação musical, beneficiando mais crianças e jovens, sua ajuda é muito importante. Existem diversas formas de apoiar financeiramente o Instituto ABDA. Conheça as opções, envolva-se na causa e ajude a manter os projetos que fazem diferença.</p>
+    </div>
+  </div>
+</section>
+
+<section class="formas-section">
+  <div class="section-inner">
+
+    <div class="tabs">
+      <button class="tab" [class.ativo]="secaoAtiva === 'parceiro-mensal'" (click)="setSecao('parceiro-mensal')">Parceiro Mensal</button>
+      <button class="tab" [class.ativo]="secaoAtiva === 'cartao'" (click)="setSecao('cartao')">Cartão de Crédito</button>
+      <button class="tab" [class.ativo]="secaoAtiva === 'deposito'" (click)="setSecao('deposito')">Depósito em Conta</button>
+    </div>
+
+    <!-- PARCEIRO MENSAL -->
+    <div class="tab-conteudo" *ngIf="secaoAtiva === 'parceiro-mensal'">
+      <h2 class="section-titulo">Parceiro Mensal</h2>
+      <p class="tab-desc">O Instituto ABDA disponibiliza para você, que deseja nos apoiar, o débito mensal do valor escolhido através do PagSeguro em seu cartão de crédito. Trata-se de uma forma segura e eficiente de você cooperar com nossos projetos. Escolha o valor de sua oferta mensal:</p>
+      <div class="opcoes-grid">
+        <a *ngFor="let opcao of opcoesMensais" [href]="opcao.link" target="_blank" class="opcao-card">
+          <span class="opcao-moeda">R$</span>
+          <span class="opcao-valor">{{ opcao.valor }}</span>
+          <span class="opcao-periodo">/mês</span>
+          <span class="opcao-btn">Contribuir</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- CARTÃO DE CRÉDITO -->
+    <div class="tab-conteudo" *ngIf="secaoAtiva === 'cartao'">
+      <h2 class="section-titulo">Cartão de Crédito</h2>
+      <p class="tab-desc">Doe de forma segura por cartão de crédito através do PayPal.</p>
+      <div class="doe-box">
+        <div class="doe-icone">💳</div>
+        <p>Clique no botão abaixo para realizar sua doação de forma segura via PayPal.</p>
+        <a href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=MJLHZ6ALPCJFA" target="_blank" class="btn-doe-principal">Doe via PayPal</a>
+      </div>
+    </div>
+
+    <!-- DEPÓSITO EM CONTA -->
+    <div class="tab-conteudo" *ngIf="secaoAtiva === 'deposito'">
+      <h2 class="section-titulo">Depósito em Conta</h2>
+      <p class="tab-desc">O Instituto ABDA trabalha com os seguintes dados bancários:</p>
+      <div class="banco-card">
+        <div class="banco-item">
+          <span class="banco-label">Banco</span>
+          <span class="banco-valor">Banco do Brasil</span>
+        </div>
+        <div class="banco-item">
+          <span class="banco-label">Agência</span>
+          <span class="banco-valor">0637-8</span>
+        </div>
+        <div class="banco-item">
+          <span class="banco-label">Conta Corrente</span>
+          <span class="banco-valor">101.257-6</span>
+        </div>
+        <div class="banco-item">
+          <span class="banco-label">CNPJ</span>
+          <span class="banco-valor">21.809.448/0001-20</span>
+        </div>
+        <div class="banco-item pix">
+          <span class="banco-label">PIX</span>
+          <span class="banco-valor">21.809.448/0001-20 (CNPJ)</span>
+        </div>
+      </div>
+      <div class="obs-box">
+        <p>⚠️ As doações realizadas pela internet exigem a identificação do CNPJ: <strong>21.809.448/0001-20</strong></p>
+        <p>Após o depósito, envie uma imagem do comprovante para: <strong>contato&#64;institutoabda.com.br</strong></p>
+        <p>Todas as informações são confidenciais e não serão repassadas a terceiros.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<app-footer></app-footer>

@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+
+<section class="hero-parallax">
+  <div class="hero-content">
+    <h1>Cursos</h1>
+    <nav class="breadcrumb">
+      <a routerLink="/home">Home</a>
+      <span>/</span>
+      <span>Cursos</span>
+    </nav>
+  </div>
+</section>
+
+<section class="cursos-section">
+  <div class="section-inner">
+    <h2 class="section-titulo">Nossos Cursos</h2>
+    <div class="cursos-grid">
+      <a *ngFor="let curso of cursos" [routerLink]="'/cursos/' + curso.slug" class="curso-card">
+        <div class="curso-img-wrap">
+          <img [src]="curso.imagem" [alt]="curso.titulo">
+          <div class="curso-overlay">
+            <span>Ver detalhes</span>
+          </div>
+        </div>
+        <div class="curso-body">
+          <h3>{{ curso.titulo }}</h3>
+          <p>{{ curso.descricao }}</p>
+          <span class="curso-link">Ver detalhes →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

@@ -1,0 +1,53 @@
+<app-navbar></app-navbar>
+
+<section class="page-banner">
+  <h1>{{ evento?.titulo }}</h1>
+  <p><a routerLink="/home">Home</a> / <a routerLink="/eventos">Eventos</a></p>
+</section>
+
+<section class="detalhe-container" *ngIf="evento">
+
+  <div class="detalhe-main">
+
+    <div class="info-boxes">
+      <div class="info-box verde">
+        <span class="info-label">Data & Hora</span>
+        <p>Início: {{ evento.data }} {{ evento.hora }}</p>
+        <p>Fim: {{ evento.fim }}</p>
+      </div>
+      <div class="info-box verde">
+        <span class="info-label">Localização</span>
+        <p>{{ evento.local }}</p>
+      </div>
+    </div>
+
+    <img [src]="evento.imagem" [alt]="evento.titulo" class="detalhe-img">
+
+    <h2 class="detalhe-titulo">{{ evento.titulo }}</h2>
+    <p class="detalhe-descricao">{{ evento.descricao }}</p>
+
+  </div>
+
+  <div class="detalhe-sidebar">
+    <div class="sidebar-doe">
+      <p>Quero doar via</p>
+      <a href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=MJLHZ6ALPCJFA" target="_blank">
+        <img src="/paypal.jpg" alt="PayPal">
+      </a>
+    </div>
+    <div class="sidebar-doe">
+      <p>Quero doar via</p>
+      <a href="https://pag.ae/7V-pFu5X9" target="_blank">
+        <img src="/pagbank-icone.png" alt="PagBank">
+      </a>
+    </div>
+  </div>
+
+</section>
+
+<section *ngIf="!evento" class="nao-encontrado">
+  <h2>Evento não encontrado.</h2>
+  <a routerLink="/eventos">Voltar para Eventos</a>
+</section>
+
+<app-footer></app-footer>

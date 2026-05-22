@@ -1,0 +1,133 @@
+<header class="main-header">
+  <div class="nav-container">
+
+    <div class="logo">
+      <a routerLink="/home" (click)="fecharTudo()">
+        <span class="logo-bold">INSTITUTO</span>
+        <span class="logo-thin">ABDA</span>
+      </a>
+    </div>
+
+    <nav class="menu">
+      <ul>
+        <li>
+          <a routerLink="/home" routerLinkActive="active" (click)="fecharTudo()">HOME</a>
+        </li>
+
+        <li class="has-dropdown">
+          <a class="dropdown-trigger" (click)="toggleSobre()" [class.active]="sobreAberto">
+            SOBRE NÓS <span class="arrow" [class.rotated]="sobreAberto">&#9660;</span>
+          </a>
+          <div class="dropdown-menu" [class.aberto]="sobreAberto">
+            <a routerLink="/sobre" (click)="fecharTudo()"><span class="drop-icon">&#9670;</span> Nossa História</a>
+            <a routerLink="/eventos" (click)="fecharTudo()"><span class="drop-icon">&#9670;</span> Eventos</a>
+            <a routerLink="/artigos" (click)="fecharTudo()"><span class="drop-icon">&#9670;</span> Artigos</a>
+            <a routerLink="/noticias" (click)="fecharTudo()"><span class="drop-icon">&#9670;</span> Notícias</a>
+            <a routerLink="/fotos" (click)="fecharTudo()"><span class="drop-icon">&#9670;</span> Fotos</a>
+            <a routerLink="/depoimentos" (click)="fecharTudo()"><span class="drop-icon">&#9670;</span> Depoimentos</a>
+            <a routerLink="/transparencia" (click)="fecharTudo()"><span class="drop-icon">&#9670;</span> Transparência</a>
+            <a routerLink="/contato" (click)="fecharTudo()"><span class="drop-icon">&#9670;</span> Contato</a>
+            <a routerLink="/registros" (click)="fecharTudo()"><span class="drop-icon">&#9670;</span> Registros Órgãos Públicos</a>
+          </div>
+        </li>
+
+        <li class="has-dropdown">
+          <a class="dropdown-trigger" (click)="toggleAjudar()" [class.active]="ajudarAberto">
+            COMO AJUDAR <span class="arrow" [class.rotated]="ajudarAberto">&#9660;</span>
+          </a>
+          <div class="dropdown-menu" [class.aberto]="ajudarAberto">
+            <a routerLink="/doacoes" (click)="fecharTudo()"><span class="drop-icon">&#9670;</span> Doe Aqui</a>
+            <a routerLink="/parceiros" (click)="fecharTudo()"><span class="drop-icon">&#9670;</span> Parceiros</a>
+            <a routerLink="/seja-parceiro" (click)="fecharTudo()"><span class="drop-icon">&#9670;</span> Seja um Parceiro</a>
+          </div>
+        </li>
+
+        <li class="has-dropdown">
+          <a class="dropdown-trigger" (click)="toggleCursos()" [class.active]="cursosAberto">
+            CURSOS <span class="arrow" [class.rotated]="cursosAberto">&#9660;</span>
+          </a>
+          <div class="dropdown-menu" [class.aberto]="cursosAberto">
+            <a routerLink="/cursos" (click)="fecharTudo()"><span class="drop-icon">&#9670;</span> Todos os Cursos</a>
+            <a routerLink="/cursos/musicalizacao-infantil" (click)="fecharTudo()"><span class="drop-icon">&#9670;</span> Musicalização Infantil</a>
+            <a routerLink="/cursos/terceira-idade" (click)="fecharTudo()"><span class="drop-icon">&#9670;</span> Curso para Terceira Idade</a>
+            <a routerLink="/cursos/tecnica-vocal" (click)="fecharTudo()"><span class="drop-icon">&#9670;</span> Técnica Vocal</a>
+            <a routerLink="/cursos/violino" (click)="fecharTudo()"><span class="drop-icon">&#9670;</span> Violino</a>
+            <a routerLink="/cursos/violao" (click)="fecharTudo()"><span class="drop-icon">&#9670;</span> Violão</a>
+            <a routerLink="/cursos/fanfarra" (click)="fecharTudo()"><span class="drop-icon">&#9670;</span> Fanfarra</a>
+            <a routerLink="/cursos/croche" (click)="fecharTudo()"><span class="drop-icon">&#9670;</span> Crochê</a>
+            <a routerLink="/cursos/clube-da-leitura" (click)="fecharTudo()"><span class="drop-icon">&#9670;</span> Clube da Leitura</a>
+            <a routerLink="/video-aulas" (click)="fecharTudo()"><span class="drop-icon">&#9670;</span> Vídeo Aulas</a>
+          </div>
+        </li>
+
+        <li class="has-dropdown">
+          <a class="dropdown-trigger" (click)="toggleTime()" [class.active]="timeAberto">
+            NOSSO TIME <span class="arrow" [class.rotated]="timeAberto">&#9660;</span>
+          </a>
+          <div class="dropdown-menu" [class.aberto]="timeAberto">
+            <a routerLink="/nosso-time" (click)="fecharTudo()"><span class="drop-icon">&#9670;</span> Professores</a>
+            <a routerLink="/nosso-time" (click)="fecharTudo()"><span class="drop-icon">&#9670;</span> Diretoria Vigente</a>
+            <a routerLink="/nosso-time" (click)="fecharTudo()"><span class="drop-icon">&#9670;</span> Secretaria</a>
+            <a routerLink="/nosso-time" (click)="fecharTudo()"><span class="drop-icon">&#9670;</span> Colaboradores Voluntários</a>
+          </div>
+        </li>
+
+        <li>
+          <a routerLink="/coral" routerLinkActive="active" (click)="fecharTudo()">CORAL E ORQUESTRA</a>
+        </li>
+        <li>
+          <a routerLink="/contato" routerLinkActive="active" (click)="fecharTudo()">CONTATO</a>
+        </li>
+        <li>
+          <a routerLink="/cadastrar" routerLinkActive="active" class="btn-login" (click)="fecharTudo()">LOGIN</a>
+        </li>
+      </ul>
+    </nav>
+
+    <button class="menu-mobile-btn" (click)="toggleMobile()" [class.aberto]="menuMobileAberto" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+
+  <nav class="menu-mobile" [class.aberto]="menuMobileAberto">
+    <a routerLink="/home" (click)="fecharTudo()">HOME</a>
+    <div class="mobile-group">
+      <span class="mobile-group-title">SOBRE NÓS</span>
+      <a routerLink="/sobre" (click)="fecharTudo()">— Nossa História</a>
+      <a routerLink="/eventos" (click)="fecharTudo()">— Eventos</a>
+      <a routerLink="/artigos" (click)="fecharTudo()">— Artigos</a>
+      <a routerLink="/noticias" (click)="fecharTudo()">— Notícias</a>
+      <a routerLink="/fotos" (click)="fecharTudo()">— Fotos</a>
+      <a routerLink="/depoimentos" (click)="fecharTudo()">— Depoimentos</a>
+      <a routerLink="/transparencia" (click)="fecharTudo()">— Transparência</a>
+      <a routerLink="/contato" (click)="fecharTudo()">— Contato</a>
+      <a routerLink="/registros" (click)="fecharTudo()">— Registros Órgãos Públicos</a>
+    </div>
+    <div class="mobile-group">
+      <span class="mobile-group-title">COMO AJUDAR</span>
+      <a routerLink="/doacoes" (click)="fecharTudo()">— Doe Aqui</a>
+      <a routerLink="/parceiros" (click)="fecharTudo()">— Parceiros</a>
+      <a routerLink="/seja-parceiro" (click)="fecharTudo()">— Seja um Parceiro</a>
+    </div>
+    <div class="mobile-group">
+      <span class="mobile-group-title">CURSOS</span>
+      <a routerLink="/cursos" (click)="fecharTudo()">— Todos os Cursos</a>
+      <a routerLink="/cursos/musicalizacao-infantil" (click)="fecharTudo()">— Musicalização Infantil</a>
+      <a routerLink="/cursos/tecnica-vocal" (click)="fecharTudo()">— Técnica Vocal</a>
+      <a routerLink="/cursos/violino" (click)="fecharTudo()">— Violino</a>
+      <a routerLink="/cursos/violao" (click)="fecharTudo()">— Violão</a>
+      <a routerLink="/video-aulas" (click)="fecharTudo()">— Vídeo Aulas</a>
+    </div>
+    <div class="mobile-group">
+      <span class="mobile-group-title">NOSSO TIME</span>
+      <a routerLink="/nosso-time" (click)="fecharTudo()">— Professores</a>
+      <a routerLink="/nosso-time" (click)="fecharTudo()">— Diretoria Vigente</a>
+      <a routerLink="/nosso-time" (click)="fecharTudo()">— Secretaria</a>
+      <a routerLink="/nosso-time" (click)="fecharTudo()">— Colaboradores Voluntários</a>
+    </div>
+    <a routerLink="/coral" (click)="fecharTudo()">CORAL E ORQUESTRA</a>
+    <a routerLink="/contato" (click)="fecharTudo()">CONTATO</a>
+    <a routerLink="/cadastrar" (click)="fecharTudo()">LOGIN</a>
+  </nav>
+</header>

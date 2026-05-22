@@ -1,0 +1,109 @@
+<app-navbar></app-navbar>
+
+<section class="hero-parallax">
+  <div class="hero-content">
+    <h1>Seja um Parceiro</h1>
+    <nav class="breadcrumb">
+      <a routerLink="/home">Home</a>
+      <span>/</span>
+      <span>Seja um Parceiro</span>
+    </nav>
+  </div>
+</section>
+
+<section class="frase-section">
+  <div class="frase-inner">
+    <p class="frase-destaque">"Não se toca uma orquestra sozinho."</p>
+    <p class="frase-sub">Junte-se ao Instituto ABDA e ajude a transformar vidas através da música e da arte.</p>
+    <span class="hashtag">#vemtocarconosco</span>
+  </div>
+</section>
+
+<section class="conteudo-section">
+  <div class="conteudo-grid">
+
+    <div class="beneficios">
+      <h2 class="bloco-titulo">Por que ser parceiro?</h2>
+      <div class="beneficio-item">
+        <div class="beneficio-numero">01</div>
+        <div>
+          <h3>Transformação social</h3>
+          <p>Ajude crianças e jovens a terem acesso à educação musical e cultural de qualidade em Osasco e região.</p>
+        </div>
+      </div>
+      <div class="beneficio-item">
+        <div class="beneficio-numero">02</div>
+        <div>
+          <h3>Impacto real e mensurável</h3>
+          <p>Cada contribuição é aplicada diretamente nos projetos. Nossos relatórios de transparência comprovam cada ação.</p>
+        </div>
+      </div>
+      <div class="beneficio-item">
+        <div class="beneficio-numero">03</div>
+        <div>
+          <h3>Reconhecimento institucional</h3>
+          <p>Instituto reconhecido como Utilidade Pública Municipal. Sua marca associada a uma causa de excelência.</p>
+        </div>
+      </div>
+      <div class="beneficio-item">
+        <div class="beneficio-numero">04</div>
+        <div>
+          <h3>Rede de valor</h3>
+          <p>Faça parte de uma comunidade de parceiros, voluntários e apoiadores comprometidos com o bem social.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="formulario-wrap">
+      <div class="formulario">
+        <h2 class="bloco-titulo claro">Preencha o formulário</h2>
+        <p class="form-desc">Deixe seus dados e entraremos em contato com informações de como contribuir.</p>
+
+        <div class="sucesso" *ngIf="enviado">
+          Obrigado! Entraremos em contato em breve.
+        </div>
+        <div class="erro-msg" *ngIf="erro">
+          Preencha todos os campos obrigatórios.
+        </div>
+
+        <div class="form-group">
+          <label>Nome completo *</label>
+          <input type="text" placeholder="Seu nome completo" [(ngModel)]="nome">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>E-mail *</label>
+            <input type="email" placeholder="Seu e-mail" [(ngModel)]="email">
+          </div>
+          <div class="form-group">
+            <label>Telefone *</label>
+            <input type="tel" placeholder="(11) 99999-9999" [(ngModel)]="telefone">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Cidade</label>
+          <input type="text" placeholder="Sua cidade" [(ngModel)]="cidade">
+        </div>
+        <div class="form-group">
+          <label>Como deseja contribuir? *</label>
+          <select [(ngModel)]="como">
+            <option value="">Selecione uma opção</option>
+            <option value="voluntario">Voluntário</option>
+            <option value="doacao">Doação financeira</option>
+            <option value="parceria">Parceria institucional</option>
+            <option value="patrocinio">Patrocínio</option>
+            <option value="outro">Outro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Mensagem</label>
+          <textarea placeholder="Conte-nos mais sobre como deseja contribuir..." rows="4" [(ngModel)]="mensagem"></textarea>
+        </div>
+        <button class="btn-enviar" (click)="enviar()">Enviar</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<app-footer></app-footer>

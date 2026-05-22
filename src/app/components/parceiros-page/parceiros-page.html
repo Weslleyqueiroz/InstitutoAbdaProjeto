@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+
+<section class="hero-parallax">
+  <div class="hero-content">
+    <h1>Parceiros</h1>
+    <nav class="breadcrumb">
+      <a routerLink="/home">Home</a>
+      <span>/</span>
+      <span>Parceiros</span>
+    </nav>
+  </div>
+</section>
+
+<section class="intro-section">
+  <div class="intro-inner">
+    <div class="intro-linha"></div>
+    <div class="intro-texto">
+      <h2>Quem caminha conosco</h2>
+      <p>O Instituto ABDA acredita que grandes transformações só acontecem em conjunto. Nossos parceiros são parte essencial da nossa missão de transformar vidas através da arte e da educação musical.</p>
+    </div>
+  </div>
+</section>
+
+<section class="parceiros-section">
+  <div class="section-inner">
+    <h2 class="section-titulo">Nossos Parceiros</h2>
+    <div class="parceiros-grid">
+      <div *ngFor="let parceiro of parceiros" class="parceiro-card">
+        <img [src]="parceiro.logo" [alt]="parceiro.nome">
+        <span>{{ parceiro.nome }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-texto">
+      <h2>Sua empresa pode fazer parte desta história</h2>
+      <p>Junte-se aos nossos parceiros e ajude a transformar vidas através da música e da arte. Não se toca uma orquestra sozinho.</p>
+    </div>
+    <a routerLink="/seja-parceiro" class="btn-cta">Seja um Parceiro</a>
+  </div>
+</section>
+
+<app-footer></app-footer>

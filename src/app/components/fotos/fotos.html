@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+
+<section class="page-banner">
+  <h1>Fotos</h1>
+  <p>Home / Fotos</p>
+</section>
+
+<section class="fotos-container">
+  <div class="albuns-grid">
+     <a *ngFor="let album of albuns" [routerLink]="album.link" class="album-card">
+      <div class="album-img-wrap">
+        <img [src]="album.capa" [alt]="album.titulo">
+        <div class="album-overlay">
+          <span>Ver fotos</span>
+        </div>
+      </div>
+      <div class="album-info">
+        <h3>{{ album.titulo }}</h3>
+        <span class="album-qtd">{{ album.quantidade }} fotos</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<app-footer></app-footer>

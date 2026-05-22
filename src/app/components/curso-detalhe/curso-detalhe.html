@@ -1,0 +1,47 @@
+<app-navbar></app-navbar>
+
+<section class="hero-parallax">
+  <div class="hero-content">
+    <h1>{{ curso?.titulo }}</h1>
+    <nav class="breadcrumb">
+      <a routerLink="/home">Home</a>
+      <span>/</span>
+      <a routerLink="/cursos">Cursos</a>
+      <span>/</span>
+      <span>{{ curso?.titulo }}</span>
+    </nav>
+  </div>
+</section>
+
+<section class="detalhe-container" *ngIf="curso">
+  <div class="detalhe-main">
+    <img [src]="curso.imagem" [alt]="curso.titulo" class="detalhe-img">
+    <div class="detalhe-texto">
+      <h2>{{ curso.titulo }}</h2>
+      <p>{{ curso.descricao }}</p>
+      <a *ngIf="curso.video" [href]="curso.video" target="_blank" class="btn-video">
+        ▶ Assistir vídeo aula
+      </a>
+    </div>
+  </div>
+
+  <div class="detalhe-sidebar">
+    <div class="sidebar-card">
+      <h3>Interessado?</h3>
+      <p>Entre em contato conosco para mais informações sobre inscrições e horários.</p>
+      <a routerLink="/contato" class="btn-contato">Fale conosco</a>
+    </div>
+    <div class="sidebar-doe">
+      <p>Apoie o Instituto</p>
+      <a href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=MJLHZ6ALPCJFA" target="_blank" class="btn-doe">Doe via PayPal</a>
+      <a href="https://pag.ae/7V-pFu5X9" target="_blank" class="btn-doe pagseguro">Doe via PagSeguro</a>
+    </div>
+  </div>
+</section>
+
+<section *ngIf="!curso" class="nao-encontrado">
+  <h2>Curso não encontrado.</h2>
+  <a routerLink="/cursos">Voltar para Cursos</a>
+</section>
+
+<app-footer></app-footer>

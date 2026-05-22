@@ -7,21 +7,44 @@ import { Eventos } from './components/eventos/eventos';
 import { Noticias } from './components/noticias/noticias';
 import { NossoTime } from './components/nosso-time/nosso-time';
 import { Perfil } from './components/perfil/perfil';
-import { AdminComponent } from './admin/admin';
-
+import { EventoDetalhe } from './components/evento-detalhe/evento-detalhe';
+import { Contato } from './components/contato/contato';
+import { Fotos } from './components/fotos/fotos';
+import { AlbumDetalhe } from './components/album-detalhe/album-detalhe';
+import { Depoimentos } from './components/depoimentos/depoimentos';
+import { Transparencia } from './components/transparencia/transparencia';
+import { Registros } from './components/registros/registros';
+import { Doacoes } from './components/doacoes/doacoes';
+import { SejaParceiro } from './components/seja-parceiro/seja-parceiro';
+import { Cursos } from './components/cursos/cursos';
+import { CursoDetalhe } from './components/curso-detalhe/curso-detalhe';
+import { ParceirosPage } from './components/parceiros-page/parceiros-page';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-
   { path: 'home', component: Home },
   { path: 'sobre', component: Sobre },
   { path: 'coral', component: CoralComponent },
-  { path: 'projetos', component: Home },
-  { path: 'contato', component: Home },
-  {path: 'cadastrar', component: Cadastrar},
-  {path: 'eventos', component: Eventos},
-  {path: 'noticias' , component: Noticias},
-  {path: 'nosso-time', component: NossoTime},
+  { path: 'contato', component: Contato },
+  { path: 'ajudar', component: Doacoes },
+  { path: 'cadastrar', component: Cadastrar },
+  { path: 'eventos', component: Eventos },
+  { path: 'eventos/:slug', component: EventoDetalhe },
+  { path: 'noticias', component: Noticias },
+  { path: 'nosso-time', component: NossoTime },
   { path: 'nosso-time/perfil/:slug', component: Perfil },
-  { path: 'admin-dashboard-secret', component: AdminComponent },
+  { path: 'fotos', component: Fotos },
+  { path: 'fotos/:slug', component: AlbumDetalhe },
+  { path: 'depoimentos', component: Depoimentos },
+  { path: 'transparencia', component: Transparencia },
+  { path: 'registros', component: Registros },
+  { path: 'doacoes', component: Doacoes },
+  { path: 'seja-parceiro', component: SejaParceiro },
+  { path: 'parceiros', component: SejaParceiro },
+  { path: 'artigos', component: Home },
+  { path: 'video-aulas', component: Home },
+  { path: 'cursos', component: Cursos },
+  { path: 'cursos/:slug', component: CursoDetalhe },
+  { path: 'parceiros', component: ParceirosPage },
+  { path: '**', redirectTo: 'home' },
 ];

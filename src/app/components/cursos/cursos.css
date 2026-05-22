@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:host {
+  --azul:       #0c2340;
+  --azul-mid:   #163760;
+  --dourado:    #c9a84c;
+  --dourado-lt: #e8c97a;
+  --marfim:     #faf8f4;
+  --cinza:      #f0ede8;
+  --muted:      #7a7a7a;
+}
+
+.hero-parallax {
+  background-image: url('https://institutoabda.com.br/assets/img/bg2-Parallax.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-parallax::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(12, 35, 64, 0.25);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 62px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+.hero-content h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: var(--dourado);
+  margin: 14px auto 0;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  margin-top: 16px;
+}
+
+.breadcrumb a { color: rgba(255,255,255,0.7); text-decoration: none; }
+.breadcrumb a:hover { color: var(--dourado-lt); }
+.breadcrumb span { color: rgba(255,255,255,0.4); }
+
+.cursos-section {
+  padding: 70px 40px;
+  background: var(--marfim);
+}
+
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-titulo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--azul);
+  margin-bottom: 48px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.section-titulo::before {
+  content: '';
+  display: inline-block;
+  width: 36px;
+  height: 2px;
+  background: var(--dourado);
+  flex-shrink: 0;
+}
+
+.section-titulo::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, rgba(201,168,76,0.3), transparent);
+}
+
+.cursos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.curso-card {
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(12,35,64,0.07);
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.curso-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(to right, var(--azul), var(--dourado));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s;
+}
+
+.curso-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(12,35,64,0.14);
+}
+
+.curso-card:hover::before { transform: scaleX(1); }
+
+.curso-img-wrap {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.curso-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+  filter: grayscale(8%);
+}
+
+.curso-card:hover .curso-img-wrap img {
+  transform: scale(1.06);
+  filter: grayscale(0%);
+}
+
+.curso-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(12,35,64,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.curso-card:hover .curso-overlay { opacity: 1; }
+
+.curso-overlay span {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.curso-body {
+  padding: 22px 20px 26px;
+  border-top: 1px solid rgba(12,35,64,0.06);
+}
+
+.curso-body h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--azul);
+  margin-bottom: 8px;
+}
+
+.curso-body p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.curso-link {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--azul);
+  border-bottom: 1px solid var(--dourado);
+  padding-bottom: 2px;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 { font-size: 38px; }
+  .hero-parallax { background-attachment: scroll; }
+  .cursos-section { padding: 40px 20px; }
+}

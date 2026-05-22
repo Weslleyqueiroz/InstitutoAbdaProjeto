@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+
+<section class="hero-parallax">
+  <div class="hero-content">
+    <h1>Registros em Órgãos Públicos</h1>
+    <nav class="breadcrumb">
+      <a routerLink="/home">Home</a>
+      <span>/</span>
+      <span>Registros</span>
+    </nav>
+  </div>
+</section>
+
+<section class="intro-section">
+  <div class="intro-inner">
+    <div class="intro-linha"></div>
+    <div class="intro-texto">
+      <h2>Documentação oficial e registros institucionais</h2>
+      <p>O Instituto ABDA mantém todos os seus registros em órgãos públicos devidamente atualizados, garantindo total conformidade legal e institucional. Abaixo você encontra os documentos oficiais que comprovam nossa regularidade junto aos conselhos e entidades públicas competentes.</p>
+    </div>
+  </div>
+</section>
+
+<section class="documentos-section">
+  <div class="section-inner">
+    <h2 class="section-titulo">Documentos</h2>
+    <div class="documentos-grid">
+      <a *ngFor="let doc of documentos" [href]="doc.url" target="_blank" class="documento-card">
+        <div class="doc-icone">📋</div>
+        <div class="doc-info">
+          <h3>{{ doc.titulo }}</h3>
+          <p>{{ doc.descricao }}</p>
+        </div>
+        <div class="doc-download">↓</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

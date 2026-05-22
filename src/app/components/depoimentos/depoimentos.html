@@ -1,0 +1,65 @@
+<app-navbar></app-navbar>
+
+<section class="hero-parallax">
+  <div class="hero-content">
+    <h1>Depoimentos</h1>
+    <p>Histórias reais de quem transformou sua vida através da arte</p>
+    <nav class="breadcrumb">
+      <a routerLink="/home">Home</a>
+      <span>/</span>
+      <span>Depoimentos</span>
+    </nav>
+  </div>
+</section>
+
+<p class="depoimentos-intro">
+  Conheça algumas das histórias de alunos que passaram pelo Instituto ABDA e levaram a música para o mundo.
+</p>
+
+<section class="depoimentos-section">
+  <div class="section-inner">
+    <h2 class="section-titulo">O que dizem nossos alunos</h2>
+    <div class="depoimentos-grid">
+      <div class="dep-card" *ngFor="let dep of depoimentos">
+        <div class="dep-bg" [style.background-image]="'url(' + dep.foto + ')'"></div>
+        <div class="dep-overlay"></div>
+        <div class="dep-conteudo">
+          <div class="dep-aspas">"</div>
+          <p class="dep-texto">{{ dep.texto }}</p>
+          <div class="dep-autor">
+            <img [src]="dep.foto" [alt]="dep.nome" class="dep-autor-foto">
+            <div class="dep-autor-info">
+              <span class="dep-nome">{{ dep.nome }}</span>
+              <span class="dep-cargo">{{ dep.cargo }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-doe">
+  <div class="cta-inner">
+    <h2>Ajude a transformar mais vidas</h2>
+    <p>Sua doação permite que mais crianças e jovens tenham acesso à música e à arte.</p>
+    <div class="cta-botoes">
+      <a href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=MJLHZ6ALPCJFA" target="_blank" class="btn-doe paypal">
+        <span class="btn-icon">💙</span>
+        <div class="btn-texto">
+          <span class="btn-label">Doe via</span>
+          <span class="btn-marca">PayPal</span>
+        </div>
+      </a>
+      <a href="https://pag.ae/7V-pFu5X9" target="_blank" class="btn-doe pagseguro">
+        <span class="btn-icon">🧡</span>
+        <div class="btn-texto">
+          <span class="btn-label">Doe via</span>
+          <span class="btn-marca">PagSeguro</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

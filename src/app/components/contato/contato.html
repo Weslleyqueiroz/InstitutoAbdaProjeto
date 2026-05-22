@@ -1,0 +1,84 @@
+<app-navbar></app-navbar>
+
+<section class="page-banner">
+  <h1>Fale Conosco</h1>
+  <p>Home / Contato</p>
+</section>
+
+<section class="contato-container">
+
+  <div class="contato-info">
+
+    <div class="info-card">
+      <div class="info-icon">📍</div>
+      <div>
+        <h3>Endereço</h3>
+        <p>Rua Walt Disney, 362, Jardim Elvira<br>Osasco/SP — CEP 06250-270</p>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <div class="info-icon">📞</div>
+      <div>
+        <h3>Telefone</h3>
+        <p><a href="tel:+11999098814">(11) 99909-8814</a></p>
+        <p><a href="tel:+1136853898">(11) 3685-3898</a></p>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <div class="info-icon">✉️</div>
+      <div>
+        <h3>Email</h3>
+        <p><a href="mailto:contato@institutoabda.com.br">contato&#64;institutoabda.com.br</a></p>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <div class="info-icon">🕐</div>
+      <div>
+        <h3>Horário de Funcionamento</h3>
+        <p>Segunda a Sexta: 09:00 às 18:00</p>
+        <p>Sábado: Fechado</p>
+        <p>Domingo: Fechado</p>
+      </div>
+    </div>
+
+    <div class="redes-sociais">
+      <h3>Redes Sociais</h3>
+      <div class="redes-links">
+        <a href="https://www.instagram.com/institutoabda/" target="_blank" class="rede instagram">Instagram</a>
+        <a href="https://www.youtube.com/@abda_music_coral_e_orquestra" target="_blank" class="rede youtube">YouTube</a>
+        <a href="https://www.facebook.com/people/Instituto-Abda/100080104417292/" target="_blank" class="rede facebook">Facebook</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="contato-form">
+    <h2>Adoraríamos falar com você.<br><span>Diga-nos um olá!</span></h2>
+
+    <div class="sucesso" *ngIf="enviado">✅ Sua mensagem foi enviada com sucesso!</div>
+    <div class="erro-msg" *ngIf="erro">❌ Preencha todos os campos obrigatórios.</div>
+
+    <div class="form-group">
+      <input type="text" placeholder="Seu nome *" [(ngModel)]="nome">
+    </div>
+    <div class="form-group">
+      <input type="email" placeholder="Seu email *" [(ngModel)]="email">
+    </div>
+    <div class="form-group">
+      <input type="tel" placeholder="Seu telefone" [(ngModel)]="telefone">
+    </div>
+    <div class="form-group">
+      <input type="text" placeholder="Assunto" [(ngModel)]="assunto">
+    </div>
+    <div class="form-group">
+      <textarea placeholder="Mensagem *" rows="5" [(ngModel)]="mensagem"></textarea>
+    </div>
+    <button class="btn-enviar" (click)="enviar()">Enviar mensagem</button>
+  </div>
+
+</section>
+
+<app-footer></app-footer>
