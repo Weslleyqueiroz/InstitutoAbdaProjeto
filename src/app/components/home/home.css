@@ -1,58 +1,394 @@
-/* Configuração do Header */
-.main-header {
-  background-color: #ffffff;
-  width: 100%;
-  padding: 20px 0;
-  border-bottom: 1px solid #eee;
-  font-family: 'Montserrat', sans-serif; /* Importante para o estilo da imagem */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:host {
+  --azul:    #0c2340;
+  --dourado: #c9a84c;
+  --marfim:  #faf8f4;
+  --cinza:   #f0ede8;
+  --muted:   #7a7a7a;
 }
 
-.nav-container {
-  max-width: 1300px;
+/* ── HERO ── */
+.hero-section {
+  width: 100%;
+}
+
+/* ── MISSÃO ── */
+.missao-section {
+  padding: 80px 40px;
+  background: #fff;
+}
+
+.missao-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.missao-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--dourado);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.missao-texto h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--azul);
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.missao-texto p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.9;
+  margin-bottom: 28px;
+}
+
+.btn-missao {
+  display: inline-block;
+  background: var(--azul);
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.btn-missao:hover { background: var(--dourado); color: var(--azul); }
+
+.missao-imagem img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ── NÚMEROS ── */
+.numeros-section {
+  background: var(--azul);
+  padding: 50px 40px;
+}
+
+.numeros-inner {
+  max-width: 1000px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  justify-content: space-around;
+  gap: 20px;
 }
 
-/* Estilo do Texto "INSTITUTO" */
-.logo-bold {
-  color: #003366;
-  font-weight: 900;
-  font-size: 26px;
-  letter-spacing: -1px;
-}
-
-/* Estilo do Menu */
-.menu ul {
-  list-style: none;
+.numero-item {
   display: flex;
-  gap: 25px;
-  margin: 0;
-  padding: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 }
 
-.menu ul li a {
-  text-decoration: none;
-  color: #003366;
+.numero {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 52px;
   font-weight: 700;
-  font-size: 13px;
-  transition: 0.3s;
+  color: var(--dourado);
+  line-height: 1;
 }
 
-.menu ul li a:hover {
-  color: #0056b3;
+.numero-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+  text-align: center;
+  letter-spacing: 0.5px;
 }
 
-.carousel-placeholder {
-
-  min-height: 100px;
-  background-color: #f9f9f9;
-  
+.numero-divider {
+  width: 1px;
+  height: 60px;
+  background: rgba(255,255,255,0.15);
 }
 
-.icon{
-  height: 25px;
-  width: 25px;
+/* ── CURSOS ── */
+.cursos-section {
+  padding: 80px 40px;
+  background: var(--marfim);
+}
+
+.cursos-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-header {
+  margin-bottom: 40px;
+}
+
+.section-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--dourado);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.section-header h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--azul);
+}
+
+.section-header.claro h2 { color: white; }
+.section-header.claro .section-label { color: var(--dourado); }
+
+.cursos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.curso-item {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 6px;
+  display: block;
+  text-decoration: none;
+}
+
+.curso-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+  filter: grayscale(10%);
+}
+
+.curso-item:hover img {
+  transform: scale(1.07);
+  filter: grayscale(0%);
+}
+
+.curso-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(12,35,64,0.85) 0%, rgba(12,35,64,0.1) 60%);
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+  opacity: 0.85;
+  transition: opacity 0.3s;
+}
+
+.curso-item:hover .curso-overlay { opacity: 1; }
+
+.curso-overlay span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+.cursos-ver-todos {
+  text-align: center;
+}
+
+.btn-ver-todos {
+  display: inline-block;
+  border: 2px solid var(--azul);
+  color: var(--azul);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 12px 32px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-ver-todos:hover {
+  background: var(--azul);
+  color: white;
+}
+
+/* ── IMPACTO ── */
+.impacto-section {
+  background: var(--azul);
+  padding: 80px 40px;
+}
+
+.impacto-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.impacto-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin: 48px 0 24px;
+}
+
+.impacto-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.impacto-barra-wrap {
+  width: 60px;
+  height: 160px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.impacto-barra {
+  width: 100%;
+  background: var(--dourado);
+  border-radius: 4px;
+  transition: height 0.6s ease;
+}
+
+.impacto-percent {
+  position: absolute;
+  top: -28px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--dourado);
+}
+
+.impacto-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  color: rgba(255,255,255,0.7);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.impacto-fonte {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+  text-align: center;
+  font-style: italic;
+}
+
+/* ── DEPOIMENTO ── */
+.depoimento-section {
+  background: var(--cinza);
+  padding: 80px 40px;
+}
+
+.depoimento-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.depoimento-aspas {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 100px;
+  color: var(--dourado);
+  line-height: 0.6;
+  margin-bottom: 16px;
+  opacity: 0.6;
+}
+
+.depoimento-texto {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  color: var(--azul);
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 32px;
+}
+
+.depoimento-autor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.depoimento-autor img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--dourado);
+}
+
+.depoimento-nome {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--azul);
+}
+
+.depoimento-cargo {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.btn-depoimentos {
+  display: inline-block;
+  border: 2px solid var(--azul);
+  color: var(--azul);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 12px 32px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-depoimentos:hover { background: var(--azul); color: white; }
+
+/* ── RESPONSIVO ── */
+@media (max-width: 768px) {
+  .missao-inner { grid-template-columns: 1fr; gap: 30px; }
+  .missao-imagem img { height: 250px; }
+  .numeros-inner { flex-wrap: wrap; gap: 30px; }
+  .numero-divider { display: none; }
+  .cursos-grid { grid-template-columns: repeat(2, 1fr); }
+  .impacto-grid { grid-template-columns: repeat(2, 1fr); }
+  .missao-section, .cursos-section, .impacto-section, .depoimento-section { padding: 50px 20px; }
 }

@@ -1,0 +1,48 @@
+<app-navbar></app-navbar>
+
+<section class="hero-parallax">
+  <div class="hero-content">
+    <h1>Vídeo Aulas</h1>
+    <nav class="breadcrumb">
+      <a routerLink="/home">Home</a>
+      <span>/</span>
+      <span>Vídeo Aulas</span>
+    </nav>
+  </div>
+</section>
+
+<section class="intro-section">
+  <div class="intro-inner">
+    <div class="intro-linha"></div>
+    <div class="intro-texto">
+      <h2>Aprenda no seu ritmo</h2>
+      <p>O Instituto ABDA disponibiliza vídeo aulas gratuitas para que você possa aprender música de onde estiver. Acesse os conteúdos abaixo e comece sua jornada musical.</p>
+    </div>
+  </div>
+</section>
+
+<section class="videos-section">
+  <div class="section-inner">
+    <h2 class="section-titulo">Aulas Disponíveis</h2>
+    <div class="videos-grid">
+      <div *ngFor="let video of videos" class="video-card">
+        <div class="video-wrap">
+          <iframe
+            [src]="getUrl(video.embedId)"
+            [title]="video.titulo"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="video-info">
+          <span class="video-tag">{{ video.categoria }}</span>
+          <h3>{{ video.titulo }}</h3>
+          <p>{{ video.descricao }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

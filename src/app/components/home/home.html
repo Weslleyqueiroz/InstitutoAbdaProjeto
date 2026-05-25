@@ -1,13 +1,153 @@
 <app-navbar></app-navbar>
 
-<div style="max-width: 850px; margin: auto; padding: 24px 20px;">
-  <app-carrossel [imagens]="['/fotos_formatura-alunos-instituto-abda_6.jpg','/fotos_formatura-dezembro-2021_44']"></app-carrossel>
-</div>
+<!-- HERO CARROSSEL -->
+<section class="hero-section">
+  <app-carrossel [imagens]="[
+    'https://institutoabda.com.br/uploads/fotos/formatura-alunos-instituto-abda_4/fotos_formatura-alunos-instituto-abda_243.jpg',
+    'https://institutoabda.com.br/uploads/fotos/fanfarra-2022_39/fotos_fanfarra-2022_85.jpg',
+    'https://institutoabda.com.br/uploads/fotos/clubinho-da-leitura_33/fotos_clubinho-da-leitura_96.jpg',
+    'https://institutoabda.com.br/uploads/fotos/turma-do-croche_29/fotos_turma-do-croche_46.jpg',
+    'https://institutoabda.com.br/uploads/fotos/turma-de-violinos_11/fotos_turma-de-violinos_18.jpg'
+  ]"></app-carrossel>
+</section>
 
-<div></div>
+<!-- MISSÃO -->
+<section class="missao-section">
+  <div class="missao-inner">
+    <div class="missao-texto">
+      <span class="missao-label">Nossa Missão</span>
+      <h2>Transformando vidas através da arte</h2>
+      <p>O Instituto ABDA é uma entidade sem fins lucrativos fundada em 2014, com sede em Osasco/SP. Nosso trabalho oferece educação musical, cultural e socioeducacional a crianças, jovens e adultos em situação de vulnerabilidade social.</p>
+      <a routerLink="/sobre" class="btn-missao">Conheça nossa história</a>
+    </div>
+    <div class="missao-imagem">
+      <img src="https://institutoabda.com.br/uploads/fotos/inauguracao-instituto-abda_3/fotos_inauguracao-instituto-abda_39.jpg" alt="Instituto ABDA">
+    </div>
+  </div>
+</section>
 
-<section class="carousel-placeholder"></section>
+<!-- NÚMEROS -->
+<section class="numeros-section">
+  <div class="numeros-inner">
+    <div class="numero-item">
+      <span class="numero">+5.000</span>
+      <span class="numero-label">Alunos atendidos</span>
+    </div>
+    <div class="numero-divider"></div>
+    <div class="numero-item">
+      <span class="numero">+30</span>
+      <span class="numero-label">Anos de história</span>
+    </div>
+    <div class="numero-divider"></div>
+    <div class="numero-item">
+      <span class="numero">10+</span>
+      <span class="numero-label">Cursos oferecidos</span>
+    </div>
+    <div class="numero-divider"></div>
+    <div class="numero-item">
+      <span class="numero">150+</span>
+      <span class="numero-label">Integrantes no coral</span>
+    </div>
+  </div>
+</section>
 
+<!-- CURSOS EM DESTAQUE -->
+<section class="cursos-section">
+  <div class="cursos-inner">
+    <div class="section-header">
+      <span class="section-label">O que oferecemos</span>
+      <h2>Nossos Cursos</h2>
+    </div>
+    <div class="cursos-grid">
+      <a routerLink="/cursos/violino" class="curso-item">
+        <img src="https://institutoabda.com.br/uploads/2022/03/cursos_violino_6.jpg" alt="Violino">
+        <div class="curso-overlay"><span>Violino</span></div>
+      </a>
+      <a routerLink="/cursos/tecnica-vocal" class="curso-item">
+        <img src="https://institutoabda.com.br/uploads/2020/06/cursos_tecnica-vocal_3.jpg" alt="Técnica Vocal">
+        <div class="curso-overlay"><span>Técnica Vocal</span></div>
+      </a>
+      <a routerLink="/cursos/fanfarra" class="curso-item">
+        <img src="https://institutoabda.com.br/uploads/2022/03/cursos_fanfarra_5.jfif" alt="Fanfarra">
+        <div class="curso-overlay"><span>Fanfarra</span></div>
+      </a>
+      <a routerLink="/cursos/croche" class="curso-item">
+        <img src="https://institutoabda.com.br/uploads/2022/03/cursos_croche_7.jpg" alt="Crochê">
+        <div class="curso-overlay"><span>Crochê</span></div>
+      </a>
+      <a routerLink="/cursos/clube-da-leitura" class="curso-item">
+        <img src="https://institutoabda.com.br/uploads/2022/03/cursos_clube-da-leitura_8.jpg" alt="Clube da Leitura">
+        <div class="curso-overlay"><span>Clube da Leitura</span></div>
+      </a>
+      <a routerLink="/cursos/violao" class="curso-item">
+        <img src="https://institutoabda.com.br/uploads/2022/03/cursos_violao_10.jpg" alt="Violão">
+        <div class="curso-overlay"><span>Violão</span></div>
+      </a>
+    </div>
+    <div class="cursos-ver-todos">
+      <a routerLink="/cursos" class="btn-ver-todos">Ver todos os cursos</a>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACTO -->
+<section class="impacto-section">
+  <div class="impacto-inner">
+    <div class="section-header claro">
+      <span class="section-label">Nosso Impacto</span>
+      <h2>Transformação em números</h2>
+    </div>
+    <div class="impacto-grid">
+      <div class="impacto-card">
+        <div class="impacto-barra-wrap">
+          <div class="impacto-barra" style="height: 90%"></div>
+          <span class="impacto-percent">90%</span>
+        </div>
+        <span class="impacto-label">Satisfação da comunidade</span>
+      </div>
+      <div class="impacto-card">
+        <div class="impacto-barra-wrap">
+          <div class="impacto-barra" style="height: 85%"></div>
+          <span class="impacto-percent">85%</span>
+        </div>
+        <span class="impacto-label">Melhora na autoestima dos alunos</span>
+      </div>
+      <div class="impacto-card">
+        <div class="impacto-barra-wrap">
+          <div class="impacto-barra" style="height: 78%"></div>
+          <span class="impacto-percent">78%</span>
+        </div>
+        <span class="impacto-label">Continuidade nos estudos musicais</span>
+      </div>
+      <div class="impacto-card">
+        <div class="impacto-barra-wrap">
+          <div class="impacto-barra" style="height: 95%"></div>
+          <span class="impacto-percent">95%</span>
+        </div>
+        <span class="impacto-label">Alunos recomendam o Instituto</span>
+      </div>
+    </div>
+    <p class="impacto-fonte">Fonte: Autoavaliação e avaliação da comunidade — Projeto Extensionista 2026</p>
+  </div>
+</section>
+
+<!-- DEPOIMENTO DESTAQUE -->
+<section class="depoimento-section">
+  <div class="depoimento-inner">
+    <div class="depoimento-aspas">"</div>
+    <p class="depoimento-texto">Graças ao meu estudo de violino já conheci vários países da Europa, e mudei de Estado para tocar numa Orquestra profissional. Sou muito grata à Escola ABDA, onde também fui professora de violino por vários anos.</p>
+    <div class="depoimento-autor">
+      <img src="https://institutoabda.com.br/uploads/2021/08/cursos_gabrielly-santos_6.jpg" alt="Gabrielly Santos">
+      <div>
+        <span class="depoimento-nome">Gabrielly Santos</span>
+        <span class="depoimento-cargo">Ex-aluna — Violinista profissional</span>
+      </div>
+    </div>
+    <a routerLink="/depoimentos" class="btn-depoimentos">Ver todos os depoimentos</a>
+  </div>
+</section>
+
+<!-- PARCEIROS -->
 <app-parceiros></app-parceiros>
 
 <app-footer></app-footer>

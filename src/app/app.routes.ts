@@ -19,6 +19,7 @@ import { SejaParceiro } from './components/seja-parceiro/seja-parceiro';
 import { Cursos } from './components/cursos/cursos';
 import { CursoDetalhe } from './components/curso-detalhe/curso-detalhe';
 import { ParceirosPage } from './components/parceiros-page/parceiros-page';
+import { VideoAulas } from './components/video-aulas/video-aulas';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -42,9 +43,9 @@ export const routes: Routes = [
   { path: 'seja-parceiro', component: SejaParceiro },
   { path: 'parceiros', component: SejaParceiro },
   { path: 'artigos', component: Home },
-  { path: 'video-aulas', component: Home },
   { path: 'cursos', component: Cursos },
   { path: 'cursos/:slug', component: CursoDetalhe },
   { path: 'parceiros', component: ParceirosPage },
+  { path: 'video-aulas', component: VideoAulas },
   { path: '**', redirectTo: 'home' },
 ];
