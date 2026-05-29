@@ -1,22 +1,37 @@
-<div
-  class="item"
-  [style.backgroundImage]="
-    'url(' + imagens[indexImagemAtiva] + ')'
-  "
-></div>
+<div class="carrossel-wrap">
 
-<!-- Botões de controle -->
-<div class="botoes-controle">
-  <button
-    *ngFor="let imagem of imagens; index as i"
-    [class.ativo]="i === indexImagemAtiva"
-    (click)="pararTimer(); ativarImagem(i)"></button>
+  <div class="slides">
+    <div
+      *ngFor="let slide of slidesAtivos; index as i"
+      class="slide"
+      [class.ativo]="i === indexImagemAtiva">
+      <img [src]="slide.imagem" [alt]="slide.titulo" class="slide-img">
+      <div class="slide-overlay"></div>
+      <div class="slide-conteudo" *ngIf="slide.titulo">
+        <h2 class="slide-titulo">{{ slide.titulo }}</h2>
+        <p class="slide-sub" *ngIf="slide.subtitulo">{{ slide.subtitulo }}</p>
+        <a *ngIf="slide.link && slide.linkTexto" [routerLink]="slide.link" class="slide-btn">
+          {{ slide.linkTexto }}
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Setas -->
+  <button class="seta seta-esq" (click)="pararTimer(); ativarImagem(indexImagemAtiva - 1 < 0 ? slidesAtivos.length - 1 : indexImagemAtiva - 1)">
+    &#8249;
+  </button>
+  <button class="seta seta-dir" (click)="pararTimer(); ativarImagem(indexImagemAtiva + 1)">
+    &#8250;
+  </button>
+
+  <!-- Bolinhas -->
+  <div class="botoes-controle">
+    <button
+      *ngFor="let slide of slidesAtivos; index as i"
+      [class.ativo]="i === indexImagemAtiva"
+      (click)="pararTimer(); ativarImagem(i)">
+    </button>
+  </div>
+
 </div>
-
-<img
-  *ngFor="let imagem of imagens"
-  [src]="imagem"
-  width="1"
-  height="1"
-  style="opacity: 0; position: fixed"
-/>

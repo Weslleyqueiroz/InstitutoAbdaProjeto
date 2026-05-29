@@ -3,8 +3,12 @@
 
     <div class="logo">
       <a routerLink="/home" (click)="fecharTudo()">
-        <span class="logo-bold">INSTITUTO</span>
-        <span class="logo-thin">ABDA</span>
+        <div class="logo">
+  <a routerLink="/home" (click)="fecharTudo()">
+    <span class="logo-bold">INSTITUTO</span>
+    <span class="logo-thin">ABDA</span>
+  </a>
+</div>
       </a>
     </div>
 
@@ -73,7 +77,7 @@
         </li>
 
         <li>
-          <a routerLink="/coral" routerLinkActive="active" (click)="fecharTudo()">CORAL E ORQUESTRA</a>
+          <a routerLink="/coral" routerLinkActive="active" class="link-coral" (click)="fecharTudo()">CORAL E ORQUESTRA</a>
         </li>
         <li>
           <a routerLink="/contato" routerLinkActive="active" (click)="fecharTudo()">CONTATO</a>
@@ -126,8 +130,8 @@
       <a routerLink="/nosso-time" (click)="fecharTudo()">— Secretaria</a>
       <a routerLink="/nosso-time" (click)="fecharTudo()">— Colaboradores Voluntários</a>
     </div>
-    <a routerLink="/coral" (click)="fecharTudo()">CORAL E ORQUESTRA</a>
+    <a routerLink="/coral" (click)="fecharTudo()" class="mobile-coral">CORAL E ORQUESTRA</a>
     <a routerLink="/contato" (click)="fecharTudo()">CONTATO</a>
-    <a routerLink="/cadastrar" (click)="fecharTudo()">LOGIN</a>
+    <a routerLink="/cadastrar" (click)="fecharTudo()" class="mobile-login">LOGIN</a>
   </nav>
 </header>

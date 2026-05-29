@@ -1,16 +1,44 @@
 <app-navbar></app-navbar>
 
-<!-- HERO CARROSSEL -->
 <section class="hero-section">
-  <app-carrossel [imagens]="[
-    'https://institutoabda.com.br/uploads/fotos/formatura-alunos-instituto-abda_4/fotos_formatura-alunos-instituto-abda_243.jpg',
-    'https://institutoabda.com.br/uploads/fotos/fanfarra-2022_39/fotos_fanfarra-2022_85.jpg',
-    'https://institutoabda.com.br/uploads/fotos/clubinho-da-leitura_33/fotos_clubinho-da-leitura_96.jpg',
-    'https://institutoabda.com.br/uploads/fotos/turma-do-croche_29/fotos_turma-do-croche_46.jpg',
-    'https://institutoabda.com.br/uploads/fotos/turma-de-violinos_11/fotos_turma-de-violinos_18.jpg'
+  <app-carrossel [slides]="[
+    {
+      imagem: 'https://institutoabda.com.br/uploads/fotos/apresentacao-osasco_1/fotos_apresentacao-osasco_7.jpg',
+      titulo: 'Transformando Vidas Através da Arte',
+      subtitulo: 'Educação musical gratuita para crianças, jovens e adultos em Osasco/SP',
+      linkTexto: 'Conheça nossa história',
+      link: '/sobre'
+    },
+    {
+     imagem: 'https://institutoabda.com.br/uploads/fotos/fanfarra-2022_39/fotos_fanfarra-2022_48.jpg',
+     titulo: 'Fanfarra ABDA',
+     subtitulo: 'Música, disciplina e trabalho em equipe para todos',
+      linkTexto: 'Ver o curso',
+      link: '/cursos/fanfarra'
+    },
+    {
+      imagem: 'https://institutoabda.com.br/uploads/fotos/formatura-dezembro-2021_38/fotos_formatura-dezembro-2021_39.jpg',
+      titulo: 'Formatura Dezembro 2021',
+      subtitulo: 'Celebrando conquistas e novos músicos',
+      linkTexto: 'Ver as fotos',
+      link: '/fotos'
+    },
+    {
+      imagem: 'https://institutoabda.com.br/uploads/fotos/turma-de-violinos_11/fotos_turma-de-violinos_18.jpg',
+      titulo: 'Curso de Violino',
+      subtitulo: 'Professores experientes e formados para guiar sua jornada musical',
+      linkTexto: 'Saiba mais',
+      link: '/cursos/violino'
+    },
+    {
+      imagem: 'https://institutoabda.com.br/uploads/fotos/hora-do-cinema-e-clubinho-da-leitura-22092021_33/fotos_hora-do-cinema-e-clubinho-da-leitura-22092021_39.jpg',
+      titulo: 'Clubinho da Leitura',
+      subtitulo: 'Incentivando a leitura e o desenvolvimento cultural',
+      linkTexto: 'Conhecer',
+      link: '/cursos/clube-da-leitura'
+    }
   ]"></app-carrossel>
 </section>
-
 <!-- MISSÃO -->
 <section class="missao-section">
   <div class="missao-inner">
@@ -147,7 +175,7 @@
   </div>
 </section>
 
-<!-- PARCEIROS -->
+
 <app-parceiros></app-parceiros>
 
 <app-footer></app-footer>
