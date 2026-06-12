@@ -32,18 +32,26 @@
           },
           "configurations": {
             "production": {
-             "budgets": [
-            {
-               "type": "initial",
-                "maximumWarning": "2mb",
-                 "maximumError": "5mb"
-  },
-  {
+              "optimization": {
+                "scripts": true,
+                "styles": {
+                  "minify": true,
+                  "inlineCritical": true
+                },
+                "fonts": false
+              },
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
                   "type": "anyComponentStyle",
-                    "maximumWarning": "50kb",
-                    "maximumError": "100kb"
-  }
-],
+                  "maximumWarning": "50kb",
+                  "maximumError": "100kb"
+                }
+              ],
               "outputHashing": "all"
             },
             "development": {
