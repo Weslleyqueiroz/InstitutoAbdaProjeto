@@ -1,0 +1,15 @@
+[
+    build
+]
+  command = "ng build"
+  publish = "dist/InstitutoAbdaProjeto/browser"
+
+[[
+    plugins
+]]
+  package = "@netlify/plugin-angular"
+
+[
+    plugins.inputs
+]
+    inlineFonts = false
